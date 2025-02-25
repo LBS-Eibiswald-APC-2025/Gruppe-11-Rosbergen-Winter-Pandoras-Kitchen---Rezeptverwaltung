@@ -21,6 +21,8 @@ Datum|AP NR|Zeitraum|Aufwand|Ort|Tätigkeit|Probleme|Quellen
 12.02.2025| 1.1.2 | 08:25-12:25 | 4h00min | LBS | Gantt Chart | Excel Liste |
 13.02.2025| 1.1.1 | 09:25-10:00 | 0h35min | LBS | Projekthandbuch | mir fällt nichts ein | []()
 13.02.2025| 1.3.1 | 10:00-12:50 | 2h50min | LBS | Designerfassung | mir fällt nichts ein | []()
+14.02.2025| 1.3.1 | 00:00-00:00 | 0h00min | LBS | Krankenstand |Krankenstand | []()
+25.02.2025| x.x.x | 00:00-00:00 | 0h00min | LBS | _____________ | _______________ | []()
 
 ### Alwin Winter
 ---
