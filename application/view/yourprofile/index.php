@@ -1,5 +1,5 @@
 
-<h1>UserController/showProfile</h1>
+<h1>Your Profile</h1>
 <div class="box">
 	<?php $this->renderFeedbackMessages(); ?>
 
@@ -12,5 +12,5 @@
 			Your avatar pic (saved locally): <img src="<?= $this->user_avatar_file; ?>" alt="User Avatar">
 		<?php } ?>
 	</div>
-	<div>Your account type is: <?= $this->user_account_type; ?></div>
+	<!-- <div>Your account type is: <?= $this->user_account_type; ?></div> !-->
 </div>

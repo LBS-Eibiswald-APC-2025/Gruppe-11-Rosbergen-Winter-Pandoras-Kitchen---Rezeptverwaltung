@@ -1,14 +1,37 @@
 <div>
-    <h1>TEST/index</h1>
-    <div>
+    <h3>Preferences</h3>
 
-        <?php $this->renderFeedbackMessages(); ?>
+	<h2>Allergens</h2>
+    <form action="<?= Config::get('URL'); ?>preferences/add" method="post">
+        <select name="preferences">
+            <?php
+            $preferenceOptions = ["Dairy", "Eggs", "Gluten", "Grain", "Peanuts", "Seafood", "Sesame", "Shellfish", "Soy", "Sulfite", "Tree Nut", "Wheat"];
+            foreach ($preferenceOptions as $option) {
+                echo "<option value='$option'>$option</option>";
+            }
+            ?>
+        </select>
+        <button type="submit">Add</button>
+    </form>
 
-        <h3>What happens here ?</h3>
-        <div>
-            This controller/action/view shows a list of all users in the system. You could use the underlying code to
-            build things that use profile information of one or multiple/all users.
-        </div>
-
-    </div>
+    <?php if ($this->preferences) { ?>
+        <table>
+            <thead>
+                <tr>
+                    <td>Allergens</td>
+                    <td>Delete</td>
+                </tr>
+            </thead>
+            <tbody>
+                <?php foreach ($this->preferences as $value) { ?>
+                    <tr>
+                        <td><?= htmlentities($value->name); ?></td>
+                        <td><a href="<?= Config::get('URL') . 'preferences/delete/' . $value->id; ?>">Delete</a></td>
+                    </tr>
+                <?php } ?>
+            </tbody>
+        </table>
+    <?php } else { ?>
+        <div>No allergens added yet.</div>
+    <?php } ?>
 </div>

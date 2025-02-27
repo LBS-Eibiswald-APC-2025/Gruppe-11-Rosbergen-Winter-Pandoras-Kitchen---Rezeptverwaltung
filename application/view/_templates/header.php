@@ -75,7 +75,7 @@
             <li <?php if (View::checkForActiveController($filename, "user")) { echo ' class="active" '; } ?> >
                 <a href="<?php echo Config::get('URL'); ?>user/index">My Account</a>
                 <ul class="navigation-submenu">
-                    <!--<li <?php if (View::checkForActiveController($filename, "user")) { echo ' class="active" '; } ?> >
+                    <li <?php if (View::checkForActiveController($filename, "user")) { echo ' class="active" '; } ?> >
                         <a href="<?php echo Config::get('URL'); ?>user/changeUserRole">Change account type</a>
                     </li>
                     <li <?php if (View::checkForActiveController($filename, "user")) { echo ' class="active" '; } ?> >
@@ -89,7 +89,7 @@
                     </li>
                     <li <?php if (View::checkForActiveController($filename, "user")) { echo ' class="active" '; } ?> >
                         <a href="<?php echo Config::get('URL'); ?>user/changePassword">Change Password</a>
-                    </li>-->
+                    </li>
                     <li <?php if (View::checkForActiveController($filename, "login")) { echo ' class="active" '; } ?> >
                         <a href="<?php echo Config::get('URL'); ?>login/logout">Logout</a>
                     </li>
