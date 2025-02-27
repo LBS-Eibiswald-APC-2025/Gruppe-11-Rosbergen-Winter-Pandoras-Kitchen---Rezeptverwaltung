@@ -36,7 +36,7 @@ Datum|AP NR|Zeitraum|Aufwand|Ort|Tätigkeit|Probleme|Quellen
 05.02.2025| 1.1.1 | 10:45-12:20 | 1h35min | LBS | Projektstrukturplan |  |
 06.02.2025| 1.2.2 | 09:25-11:00 | 1h35min | LBS | Entwicklungsumgebung einrichten, GIT einrichten |  | 
 06.02.2025| 1.2.4 | 11:00-12:50 | 1h50min | LBS | Huge installien, spoonacular Registrieren,  Einbindung/Test abfrage der JSON (api.spoonacular.com/recipes/complexSearch) |  | 
-06.02.2025| 1.1.2 | 13:50-14:40 | 0h50min | LBS | Gantt Chart, xampp neu installieren um php version um zu stellen auf 8.2.12 | mir fällt nichts ein | [GanttPro.com](https://ganttpro.com/)
+06.02.2025| 1.1.2 | 13:50-14:40 | 0h50min | LBS | Gantt Chart, xampp neu installieren um php version um zu stellen auf 8.2.12 |  | [GanttPro.com](https://ganttpro.com/)
 07.02.2025| 1.1.1 | 07:30-11:05 | 3h35min | LBS | Projekthandbuch | Warum muss man alles doppelt und dreifach dokumentieren |
 10.02.2025| 1.1.2 | 10:00-10:45| 0h45min | LBS | Gantt Chart | Gantt Pro ist nicht besonders gut | [GanttPro.com](https://ganttpro.com/)
 11.02.2025| 1.1.1 | 10:00-12:20| 2h20min | LBS | Projektstrukturplan APs | Projekthandbuch, Gantt und Projektstrukturplan APs waren anders formatiert |
