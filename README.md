@@ -34,8 +34,8 @@ Datum|AP NR|Zeitraum|Aufwand|Ort|Tätigkeit|Probleme|Quellen
 04.02.2025| 1.3.1 | 13:20-16:25 | 3h50min | LBS | Design Mockup, Projektstrukturplan |  | [Canva.com](https://www.canva.com/), [Composer](https://getcomposer.org/), [Laravel.com](https://laravel.com/)
 05.02.2025| 1.1.1 | 08:15-10:45 | 2h30min | LBS | Projektstrukturplan | Excel Online ist nicht gut | 
 05.02.2025| 1.1.1 | 10:45-12:20 | 1h35min | LBS | Projektstrukturplan |  |
-06.02.2025| 1.2.2 | 09:25-11:00 | 1h35min | LBS | Entwicklungsumgebung einrichten, GIT einrichten | mir fällt nichts ein | 
-06.02.2025| 1.2.4 | 11:00-12:50 | 1h50min | LBS | Huge installien, spoonacular Registrieren,  Einbindung/Test abfrage der JSON (api.spoonacular.com/recipes/complexSearch) | mir fällt nichts ein | 
+06.02.2025| 1.2.2 | 09:25-11:00 | 1h35min | LBS | Entwicklungsumgebung einrichten, GIT einrichten |  | 
+06.02.2025| 1.2.4 | 11:00-12:50 | 1h50min | LBS | Huge installien, spoonacular Registrieren,  Einbindung/Test abfrage der JSON (api.spoonacular.com/recipes/complexSearch) |  | 
 06.02.2025| 1.1.2 | 13:50-14:40 | 0h50min | LBS | Gantt Chart, xampp neu installieren um php version um zu stellen auf 8.2.12 | mir fällt nichts ein | [GanttPro.com](https://ganttpro.com/)
 07.02.2025| 1.1.1 | 07:30-11:05 | 3h35min | LBS | Projekthandbuch | Warum muss man alles doppelt und dreifach dokumentieren |
 10.02.2025| 1.1.2 | 10:00-10:45| 0h45min | LBS | Gantt Chart | Gantt Pro ist nicht besonders gut | [GanttPro.com](https://ganttpro.com/)
@@ -47,5 +47,5 @@ Datum|AP NR|Zeitraum|Aufwand|Ort|Tätigkeit|Probleme|Quellen
 14.02.2025| 1.7.2 | 08:00-08:30 | 0h30min | LBS | Zeiterfassung |  | []()
 14.02.2025| 1.3.2 | 08:30-11:05 | 2h35min | LBS | Userpage aktualisieren | "User" page eigene page | []()
 25.02.2025| 1.3.2 | 10:00-12:20 | 2h20min | LBS | Preferenzen einbauen | Zwei phps ineinander | []()
-27.02.2025| 1.3.2 | 09:25-12:50 | 3h25min | LBS | Preferenzen einauen | Langer Taaaaaaag | []()
+27.02.2025| 1.3.2 | 09:25-12:50 | 3h25min | LBS | Preferenzen einauen |  | []()
 XX.XX.XXXX| X.X.X.X. | XX:XX-XX:XX | XhXXmin | LBS | XXX | mir fällt nichts ein | []()
