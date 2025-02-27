@@ -8,13 +8,20 @@ class PreferencesModel
      */
     public static function getPreferences()
     {
-        $database = DatabaseFactory::getFactory()->getConnection();
+        $userId     = Session::get('user_id');
+		$database = DatabaseFactory::getFactory()->getConnection();
 
-        $sql = "SELECT id, name FROM preferences WHERE user_id = :user_id";
-        $query = $database->prepare($sql);
-        $query->execute(array(':user_id' => Session::get('user_id')));
-
-        return $query->fetchAll();
+		$sql = "SELECT p.id, p.name, p.type, 
+					   IF(up.user_id IS NOT NULL, TRUE, FALSE) AS checked
+				FROM preferences p
+				LEFT JOIN user_preferences up ON p.id = up.preference_id AND up.user_id = :user_id";
+		
+		$query = $database->prepare($sql);
+		
+		$query->execute(array(":user_id" => $userId));
+		
+		return $query->fetchAll();
+		
     }
 
     /**
@@ -25,21 +32,15 @@ class PreferencesModel
     {
         $database = DatabaseFactory::getFactory()->getConnection();
 
-        $sql = "INSERT IGNORE INTO preferences (user_id, name) VALUES (:user_id, :name)";
+        $sql = "INSERT IGNORE INTO user_preferences (user_id, preference_id) VALUES (:user_id, :preference_id)";
         $query = $database->prepare($sql);
-        $query->execute(array(':user_id' => Session::get('user_id'), ':name' => $preference));
+        $query->execute(array(':user_id' => Session::get('user_id'), ':preference_id' => $preference));
     }
 
-    /**
-     * Remove a preference
-     * @param int $id The preference ID
-     */
-    public static function deletePreference($id)
-    {
-        $database = DatabaseFactory::getFactory()->getConnection();
-
-        $sql = "DELETE FROM preferences WHERE id = :id AND user_id = :user_id";
-        $query = $database->prepare($sql);
-        $query->execute(array(':id' => $id, ':user_id' => Session::get('user_id')));
-    }
+	public static function clearPreferences()
+	{
+		$database = DatabaseFactory::getFactory()->getConnection();
+		$query = $database->prepare("DELETE FROM user_preferences WHERE user_id = :user_id");
+		$query->execute([":user_id" => Session::get('user_id')]);
+	}
 }

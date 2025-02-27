@@ -21,15 +21,23 @@ class PreferencesController extends Controller
     }
 
 	/**
-     * Add a new preference
+     * Update preferences
      */
-    public function add()
-    {
-        if (isset($_POST['preferences'])) {
-            PreferencesModel::addPreference($_POST['preferences']);
-        }
-        Redirect::to('user/index');
-    }
+	public function update()
+	{
+		// Clear existing preferences
+		PreferencesModel::clearPreferences(); 
+	
+		if (!empty($_POST['preferences'])) {
+			foreach ($_POST['preferences'] as $preference) {
+				PreferencesModel::addPreference($preference);
+			}
+		}
+	
+		Redirect::to('user/index?active=preferences');
+
+	}
+	
 
     /**
      * Delete a preference

@@ -93,38 +93,49 @@
     </div>
 
     <!-- JavaScript for dynamic content loading -->
-    <script>
-        document.addEventListener("DOMContentLoaded", function() {
-            // Attach click event to all menu links
-            document.querySelectorAll('.menu-link').forEach(link => {
-                link.addEventListener('click', function(e) {
-                    e.preventDefault();
+	<script>
+document.addEventListener("DOMContentLoaded", function() {
+    // Attach click events to all menu links
+    document.querySelectorAll('.menu-link').forEach(link => {
+        link.addEventListener('click', function(e) {
+            e.preventDefault();
 
-                    // Remove active class from all menu items and add to the clicked one
-                    document.querySelectorAll('#side-menu li').forEach(li => li.classList.remove('active'));
-                    // If the link is inside a list item, add the active class
-                    if (this.parentElement.tagName.toLowerCase() === 'li') {
-                        this.parentElement.classList.add('active');
-                    }
-
-                    // Fetch and load the content from the link's href
-                    fetch(this.getAttribute('href'))
-                        .then(response => response.text())
-                        .then(html => {
-                            document.getElementById('content-container').innerHTML = html;
-                        })
-                        .catch(() => {
-                            document.getElementById('content-container').innerHTML = "<p>Sorry, there was an error loading the content.</p>";
-                        });
-                });
-            });
-
-            // Simulate a click on the "User Profile" link so it loads by default
-            const defaultLink = document.querySelector('#user-menu-container h2 a.menu-link');
-            if (defaultLink) {
-                defaultLink.click();
+            // Remove active class from all menu items and add to the clicked one
+            document.querySelectorAll('#side-menu li').forEach(li => li.classList.remove('active'));
+            if (this.parentElement.tagName.toLowerCase() === 'li') {
+                this.parentElement.classList.add('active');
             }
+
+            // Fetch and load the content from the link's href
+            fetch(this.getAttribute('href'))
+                .then(response => response.text())
+                .then(html => {
+                    document.getElementById('content-container').innerHTML = html;
+                })
+                .catch(() => {
+                    document.getElementById('content-container').innerHTML = "<p>Sorry, there was an error loading the content.</p>";
+                });
         });
-    </script>
+    });
+
+    // Check for an active menu query parameter in the URL
+    const params = new URLSearchParams(window.location.search);
+    let activeMenu = params.get('active');
+    let defaultLink;
+
+    if (activeMenu) {
+        // Try to find a link whose href contains the active menu keyword
+        defaultLink = document.querySelector(`.menu-link[href*="${activeMenu}"]`);
+    }
+    // Fallback to the default "User Profile" if none is found
+    if (!defaultLink) {
+        defaultLink = document.querySelector('#user-menu-container h2 a.menu-link');
+    }
+    if (defaultLink) {
+        defaultLink.click();
+    }
+});
+</script>
+
 </body>
 </html>
