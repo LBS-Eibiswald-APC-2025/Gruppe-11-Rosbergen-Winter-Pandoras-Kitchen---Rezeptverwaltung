@@ -49,4 +49,5 @@ Datum|AP NR|Zeitraum|Aufwand|Ort|Tätigkeit|Probleme|Quellen
 14.02.2025| 1.3.2 | 08:30-11:05 | 2h35min | LBS | Userpage aktualisieren | "User" page eigene page | []()
 25.02.2025| 1.3.2 | 10:00-12:20 | 2h20min | LBS | Preferenzen einbauen, Datenbanktabelle erstellt (preferences, user_preferences) | Zwei phps ineinander | []()
 27.02.2025| 1.3.2 | 09:25-12:50 | 3h25min | LBS | Preferenzen einauen |  | []()
+28.02.2025| 1.3.2 | 07:30-10:15 | 2h45min | LBS | Tagebuch überarbeiten, PandorasKitchen View | | []()
 XX.XX.XXXX| X.X.X.X. | XX:XX-XX:XX | XhXXmin | LBS | XXX | mir fällt nichts ein | []()
