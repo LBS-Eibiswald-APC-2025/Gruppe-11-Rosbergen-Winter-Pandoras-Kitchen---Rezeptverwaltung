@@ -204,7 +204,7 @@ body {
 
 .navigation li a:hover,
 .navigation li:hover li a:hover {
-    /*background: #fff; */
+    background: #fff;
     border: 1px solid #5ce1e6;
     color: #5ce1e6;
 }

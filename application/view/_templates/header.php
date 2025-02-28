@@ -9,7 +9,7 @@
     <!-- CSS -->
     <link rel="stylesheet" href="<?php echo Config::get('URL'); ?>css/style.css"/>
     <link rel="stylesheet" href="<?php echo Config::get('URL'); ?>css/normalize.css"/>
-
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=local_dining" />
     <script
             src="https://code.jquery.com/jquery-3.6.0.min.js"
             integrity="sha384-vtXRMe3mGCbOeY7l30aIg8H9p3GdeSe4IFlP6G8JMa7o7lXvnz3GFKzPxzJdPfGK"
@@ -39,7 +39,7 @@
         <!-- logo -->
         <div class="logo"></div>
         <!-- navigation -->
-        <div>
+        <div class="flex_wrapper">
             <ul class="navigation">
                 <li <?php if (View::checkForActiveController($filename, "index")) {
                     echo ' class="active" ';
