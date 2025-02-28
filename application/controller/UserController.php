@@ -36,6 +36,7 @@ class UserController extends Controller
 			['url' => Config::get('URL') . 'plans', 'label' => 'Existing Plans'],
 			['url' => Config::get('URL') . 'pantry', 'label' => 'Pantry']
 			)
+			
 		));
 	}
 
