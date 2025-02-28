@@ -24,7 +24,7 @@ Datum|AP NR|Zeitraum|Aufwand|Ort|Tätigkeit|Probleme|Quellen
 14.02.2025| 1.3.1 | 00:00-00:00 | 0h00min | LBS | Krankenstand |Krankenstand | []()
 25.02.2025| 1.3.2 | 10:00-12:20 | 2h20min | LBS | Git neu verknüpet, Home View, erstellt, Recherche, Anpassungen an HTML und CSS Strucktur | GitHub switch probleme, composer und xampp Probleme | []()
 27.02.2025| 1.3.2 | 09:25-12:50 | 3h25min | LBS | Home View, grobe Fertigstellung der Anpassungen, Recherche, Datenbanktabelle erstellt (preferences, user_preferences) | | []()
-28.02.2025| 1.3.2 | 07:30-00:00 | 0h00min | LBS | Tagebuch überarbeiten, PandorasKitchen View | | []()
+28.02.2025| 1.3.2 | 07:30-10:15 | 2h45min | LBS | Tagebuch überarbeiten, PandorasKitchen View erstellt, header überarbeitet | | []()
 
 ### Alwin Winter
 ---
