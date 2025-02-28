@@ -23,7 +23,7 @@ Datum|AP NR|Zeitraum|Aufwand|Ort|Tätigkeit|Probleme|Quellen
 13.02.2025| 1.3.1 | 10:00-12:50 | 2h50min | LBS | Designerfassung | mir fällt nichts ein | []()
 14.02.2025| 1.3.1 | 00:00-00:00 | 0h00min | LBS | Krankenstand |Krankenstand | []()
 25.02.2025| 1.3.2 | 10:00-12:20 | 2h20min | LBS | Home View, erstellt, Recherche, Anpassungen an HTML und CSS Strucktur | | []()
-27.02.2025| 1.3.2 | 09:25-12:50 | 3h25min | LBS | Home View, fertigstellen der verlinkungen, Recherche | | []()
+27.02.2025| 1.3.2 | 09:25-12:50 | 3h25min | LBS | Home View, fertigstellen der verlinkungen, Recherche, Datenbanktabelle erstellt (preferences, user_preferences) | | []()
 28.02.2025| 1.3.2 | 07:30-00:00 | 0h00min | LBS | Pandoras Kitchen View, | | []()
 
 ### Alwin Winter
@@ -47,6 +47,6 @@ Datum|AP NR|Zeitraum|Aufwand|Ort|Tätigkeit|Probleme|Quellen
 14.02.2025| 1.1.1 | 07:30-08:00 | 0h30min | LBS | Projekthandbuch |  | []()
 14.02.2025| 1.7.2 | 08:00-08:30 | 0h30min | LBS | Zeiterfassung |  | []()
 14.02.2025| 1.3.2 | 08:30-11:05 | 2h35min | LBS | Userpage aktualisieren | "User" page eigene page | []()
-25.02.2025| 1.3.2 | 10:00-12:20 | 2h20min | LBS | Preferenzen View einbauen | Zwei phps ineinander | []()
-27.02.2025| 1.3.2 | 09:25-12:50 | 3h25min | LBS | Preferenzen View einbauen |  | []()
+25.02.2025| 1.3.2 | 10:00-12:20 | 2h20min | LBS | Preferenzen einbauen, Datenbanktabelle erstellt (preferences, user_preferences) | Zwei phps ineinander | []()
+27.02.2025| 1.3.2 | 09:25-12:50 | 3h25min | LBS | Preferenzen einauen |  | []()
 XX.XX.XXXX| X.X.X.X. | XX:XX-XX:XX | XhXXmin | LBS | XXX | mir fällt nichts ein | []()
