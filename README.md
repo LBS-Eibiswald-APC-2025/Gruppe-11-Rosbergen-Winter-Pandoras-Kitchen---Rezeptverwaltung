@@ -22,8 +22,9 @@ Datum|AP NR|Zeitraum|Aufwand|Ort|Tätigkeit|Probleme|Quellen
 13.02.2025| 1.1.1 | 09:25-10:00 | 0h35min | LBS | Projekthandbuch | mir fällt nichts ein | []()
 13.02.2025| 1.3.1 | 10:00-12:50 | 2h50min | LBS | Designerfassung | mir fällt nichts ein | []()
 14.02.2025| 1.3.1 | 00:00-00:00 | 0h00min | LBS | Krankenstand |Krankenstand | []()
-25.02.2025| 1.3.2 | 10:00-12:20 | 2h20min | LBS | _____________ | _______________ | []()
-27.02.2025| 1.3.2 | 09:25-12:50 | 3h25min | LBS | _____________ | _______________ | []()
+25.02.2025| 1.3.2 | 10:00-12:20 | 2h20min | LBS | Home View, erstellt, Recherche, Anpassungen an HTML und CSS Strucktur | | []()
+27.02.2025| 1.3.2 | 09:25-12:50 | 3h25min | LBS | Home View, fertigstellen der verlinkungen, Recherche | | []()
+27.02.2025| 1.3.2 | 07:30-00:00 | 0h00min | LBS | Pandoras Kitchen View, | | []()
 
 ### Alwin Winter
 ---
