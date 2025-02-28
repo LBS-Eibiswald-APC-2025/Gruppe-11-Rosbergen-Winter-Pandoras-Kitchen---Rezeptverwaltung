@@ -22,7 +22,7 @@
         <ul class="footer-nav">
             <li>Pandoras Kitchen</li>
             <li>Hauptstraße 123</li>
-            <li> 8020 Graz, Österreich</li>
+            <li>8020 Graz, Österreich</li>
             <li>+43 316 1234567</li>
         </ul>
     </div>
