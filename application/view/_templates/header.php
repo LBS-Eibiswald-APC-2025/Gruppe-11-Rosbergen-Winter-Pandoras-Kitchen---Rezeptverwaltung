@@ -54,7 +54,7 @@
                 <li <?php if (View::checkForActiveController($filename, "RecipeSearch")) {
                     echo ' class="active" ';
                 } ?> >
-                    <a href="<?php echo Config::get('URL'); ?>RecipeSearch/index">Rezepte</a>
+                    <a href="<?php echo Config::get('URL'); ?>RecipeSearch/index">Recipes</a>
                 </li>
                 <?php if (Session::userIsLoggedIn()) { ?>
                     <li <?php if (View::checkForActiveController($filename, "dashboard")) {

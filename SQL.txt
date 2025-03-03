@@ -1,0 +1,79 @@
+CREATE TABLE account_types (
+    id INT PRIMARY KEY,
+    name VARCHAR(255) NOT NULL
+);
+
+INSERT INTO account_types (id, name) VALUES
+(1, 'Guest'),
+(2, 'Normal User'),
+(3, ''),
+(4, ''),
+(5, ''),
+(6, ''),
+(7, 'Admin');
+
+
+
+
+
+CREATE TABLE preferences (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    name VARCHAR(255) UNIQUE NOT NULL,
+    type VARCHAR(50) NOT NULL
+);
+
+CREATE TABLE user_preferences (
+    user_id INT NOT NULL,
+    preference_id INT NOT NULL,
+    PRIMARY KEY (user_id, preference_id),
+    FOREIGN KEY (user_id) REFERENCES users(id) ON DELETE CASCADE,
+    FOREIGN KEY (preference_id) REFERENCES preferences(id) ON DELETE CASCADE
+);
+
+INSERT INTO preferences (name, type) VALUES
+('Dairy', 'allergen'),
+('Eggs', 'allergen'),
+('Gluten', 'allergen'),
+('Grain', 'allergen'),
+('Peanuts', 'allergen'),
+('Seafood', 'allergen'),
+('Sesame', 'allergen'),
+('Shellfish', 'allergen'),
+('Soy', 'allergen'),
+('Sulfite', 'allergen'),
+('Tree Nut', 'allergen'),
+('Wheat', 'allergen');
+
+INSERT INTO preferences (name, type) VALUES
+('Fluten Free', 'diet'),
+('Keto', 'diet'),
+('Vegetarian', 'diet'),
+('Lacto-Vegetarian', 'diet'),
+('Ovo-Vegetarian', 'diet'),
+('Vegan', 'diet'),
+('Pescetarian', 'diet'),
+('Paleo', 'diet'),
+('Primal', 'diet'),
+('Low FODMAP', 'diet'),
+('Whole30', 'diet')
+
+
+
+
+
+CREATE TABLE pantry(
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    name VARCHAR(255) UNIQUE NOT NULL,
+    type VARCHAR(50) NOT NULL
+);
+
+
+
+
+CREATE TABLE user_pantry (
+    user_id INT NOT NULL,
+    item_id INT NOT NULL,
+    PRIMARY KEY (user_id, item_id)
+    FOREIGN KEY (user_id) REFERENCES users(id) ON DELETE CASCADE,
+    FOREIGN KEY (item_id ) REFERENCES pantry(id) ON DELETE CASCADE
+);

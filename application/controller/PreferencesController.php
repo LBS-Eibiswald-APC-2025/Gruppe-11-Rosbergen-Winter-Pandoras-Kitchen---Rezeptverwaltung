@@ -8,6 +8,7 @@ class PreferencesController extends Controller
     public function __construct()
     {
         parent::__construct();
+		Auth::checkAuthentication();
     }
 
 	/**
@@ -37,16 +38,5 @@ class PreferencesController extends Controller
 		Redirect::to('user/index?active=preferences');
 
 	}
-	
-
-    /**
-     * Delete a preference
-     * @param int $id The preference ID
-     */
-    public function delete($id)
-    {
-        PreferencesModel::deletePreference($id);
-        Redirect::to('user/index');
-    }
 
 }
