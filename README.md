@@ -24,7 +24,8 @@ Datum|AP NR|Zeitraum|Aufwand|Ort|Tätigkeit|Probleme|Quellen
 14.02.2025| 1.3.1 | 00:00-00:00 | 0h00min | LBS | Krankenstand |Krankenstand | []()
 25.02.2025| 1.3.2 | 10:00-12:20 | 2h20min | LBS | Git neu verknüpet, Home View, erstellt, Recherche, Anpassungen an HTML und CSS Strucktur | GitHub switch probleme, composer und xampp Probleme | []()
 27.02.2025| 1.3.2 | 09:25-12:50 | 3h25min | LBS | Home View, grobe Fertigstellung der Anpassungen, Recherche, Datenbanktabelle erstellt (preferences, user_preferences) | | []()
-28.02.2025| 1.3.2 | 07:30-10:15 | 2h45min | LBS | Tagebuch überarbeiten, PandorasKitchen View erstellt, header überarbeitet | | []()
+03.03.2025| 1.3.2 | 13:20-15:40 | 2h20min | LBS | Pantry View einbauen | | []()
+28.02.2025| 1.3.2 | 00:00-00:00 | 0h00min | LBS |  | | []()
 
 ### Alwin Winter
 ---
@@ -50,4 +51,5 @@ Datum|AP NR|Zeitraum|Aufwand|Ort|Tätigkeit|Probleme|Quellen
 25.02.2025| 1.3.2 | 10:00-12:20 | 2h20min | LBS | Preferenzen View einbauen, Datenbanktabelle erstellt (preferences, user_preferences) | Zwei phps ineinander | []()
 27.02.2025| 1.3.2 | 09:25-12:50 | 3h25min | LBS | Preferenzen View einbauen |  | []()
 28.02.2025| 1.3.2 | 07:30-10:15 | 2h45min | LBS | Pantry View einbauen | | []()
+03.03.2025| 1.3.2 | 13:20-15:40 | 2h20min | LBS | Pantry View einbauen | | []()
 XX.XX.XXXX| X.X.X.X. | XX:XX-XX:XX | XhXXmin | LBS | XXX | mir fällt nichts ein | []()
