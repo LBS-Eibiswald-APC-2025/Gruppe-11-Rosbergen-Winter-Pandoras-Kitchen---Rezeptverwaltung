@@ -25,7 +25,7 @@ Datum|AP NR|Zeitraum|Aufwand|Ort|Tätigkeit|Probleme|Quellen
 25.02.2025| 1.3.2 | 10:00-12:20 | 2h20min | LBS | Git neu verknüpet, Home View, erstellt, Recherche, Anpassungen an HTML und CSS Strucktur | GitHub switch probleme, composer und xampp Probleme | []()
 27.02.2025| 1.3.2 | 09:25-12:50 | 3h25min | LBS | Home View, grobe Fertigstellung der Anpassungen, Recherche, Datenbanktabelle erstellt (preferences, user_preferences) | | []()
 03.03.2025| 1.3.2 | 13:20-15:40 | 2h20min | LBS | Pantry View einbauen | | []()
-28.02.2025| 1.3.2 | 00:00-00:00 | 0h00min | LBS |  | | []()
+28.02.2025| 1.3.2 | 10:00-12:20 | 2h20min | LBS | style.css (Anpassungen), header.php (Anpassungen), pandoraskitchen/index.php (erstellt), PandorasKitchenController.php (erstellt), resicesearch/index.php | | []()
 
 ### Alwin Winter
 ---
