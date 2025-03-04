@@ -29,20 +29,19 @@
 		<h2>Allergens</h2>
 
         <?php
-        // Generate checkboxes using the mapping: key (id) as value, and the value (name) as the label.
-        foreach ($allergenOptions as $id => $name) {
-            $checked = in_array($id, $selectedPreferences) ? "checked" : "";
-            echo "<label><input type='checkbox' name='preferences[]' value='$id' $checked> $name</label><br>";
-        }
+			// Generate checkboxes using the mapping: key (id) as value, and the value (name) as the label.
+			foreach ($allergenOptions as $id => $name) {
+				$checked = in_array($id, $selectedPreferences) ? "checked" : "";
+				echo "<label><input type='checkbox' name='preferences[]' value='$id' $checked> $name</label><br>";
+			}
         ?>
     	<h2>Diet</h2>
         <?php
-        // Generate checkboxes using the mapping: key (id) as value, and the value (name) as the label.
-        foreach ($dietOptions as $id => $name) {
-            $checked = in_array($id, $selectedPreferences) ? "checked" : "";
-            echo "<label><input type='checkbox' name='preferences[]' value='$id' $checked> $name</label><br>";
-        }
-		// !! Do the same for Diets: Gluten Free, Keto, Vegetarian, Lacto-Vegetarian, Ovo-Vegetarian, Vegan, Pescetarian, Paleo, Primal, Low FODMAP, Whole30
+			// Generate checkboxes using the mapping: key (id) as value, and the value (name) as the label.
+			foreach ($dietOptions as $id => $name) {
+				$checked = in_array($id, $selectedPreferences) ? "checked" : "";
+				echo "<label><input type='checkbox' name='preferences[]' value='$id' $checked> $name</label><br>";
+			}
         ?>
         
 		<button type="submit">Save Preferences</button>

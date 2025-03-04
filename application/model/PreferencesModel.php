@@ -37,6 +37,9 @@ class PreferencesModel
         $query->execute(array(':user_id' => Session::get('user_id'), ':preference_id' => $preference));
     }
 
+	/**
+     * Clear preferences of the user
+     */
 	public static function clearPreferences()
 	{
 		$database = DatabaseFactory::getFactory()->getConnection();

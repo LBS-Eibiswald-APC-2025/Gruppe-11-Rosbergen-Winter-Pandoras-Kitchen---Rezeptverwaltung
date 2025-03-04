@@ -1,17 +1,3 @@
-<?php
-function buildRecipeQuery($query, $apiKey) {
-    $query = urlencode($query); // Sanitize user input
-    $url = "https://api.spoonacular.com/recipes/complexSearch?query=$query";
-    $url .= "&addRecipeInformation=true";
-    $url .= "&addRecipeInstructions=true";
-    $url .= "&addRecipeNutrition=false";
-    $url .= "&number=10";
-    $url .= "&apiKey=" . $apiKey;
-
-    return $url;
-}
-?>
-
 <div class="container">
     <h1>Recipe Search</h1>
     <div class="box">
@@ -32,11 +18,8 @@ function buildRecipeQuery($query, $apiKey) {
 
         <?php
         if (isset($_GET['query']) && !empty($_GET['query'])) {
-            $apiKey = 'f2120b4500e84105bd83caea896db140';
-            $url = buildRecipeQuery($_GET['query'], $apiKey);
-
-            $response = file_get_contents($url);
-            $data = json_decode($response, true);
+            $spoonacular = Spoonacular::getInstance();
+            $data = $spoonacular->complexSearch($_GET['query']);
 
             if (!empty($data['results'])) {
                 echo "<h3>Search Results for: " . htmlspecialchars($_GET['query']) . "</h3>";
