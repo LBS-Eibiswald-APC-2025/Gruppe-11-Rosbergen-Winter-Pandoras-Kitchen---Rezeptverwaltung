@@ -1,3 +1,6 @@
+
+
+</div><!-- close class="wrapper" -->
 <div class="footer">
     <div>
         <p>CONTENT</p>
@@ -33,7 +36,6 @@
         <a href="#">&#x1F4F5;</a> <!-- LinkedIn -->
     </div>
 </div>
-</div><!-- close class="wrapper" -->
 
 <!-- the support button on the top right -->
 <a class="support-button" href="https://affiliates.a2hosting.com/idevaffiliate.php?id=4471&url=579" target="_blank"></a>

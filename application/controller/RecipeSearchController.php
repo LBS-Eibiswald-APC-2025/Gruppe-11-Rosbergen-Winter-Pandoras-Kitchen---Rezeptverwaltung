@@ -12,6 +12,6 @@ class RecipeSearchController extends Controller
 
     public function index()
     {
-        $this->View->render('RecipeSearch/index');
+        $this->View->render('recipesearch/index');
     }
 }
