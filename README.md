@@ -26,7 +26,9 @@ Datum|AP NR|Zeitraum|Aufwand|Ort|Tätigkeit|Probleme|Quellen
 27.02.2025| 1.3.2 | 09:25-12:50 | 3h25min | LBS | Home View, grobe Fertigstellung der Anpassungen, Recherche, Datenbanktabelle erstellt (preferences, user_preferences) | | []()
 28.02.2025| 1.3.2 | 10:00-12:20 | 2h20min | LBS | style.css (Anpassungen), header.php (Anpassungen), pandoraskitchen/index.php (erstellt), PandorasKitchenController.php (erstellt), resicesearch/index.php | | []()
 03.03.2025| 1.3.2 | 13:20-15:40 | 2h20min | LBS | Pantry View einbauen | | []()
-04.03.2025| 1.3.2 | 10:00-12:20 | 2h20min | LBS | recipesearch  | mir fällt nichts ein | []()
+04.03.2025| 1.3.2 | 10:00-12:20 | 2h20min | LBS | recipesearch erstellt, recherche für Suche und Filterung | mir fällt nichts ein | []()
+05.03.2025| 1.3.2 | 09:00-10:00 | 1h00min | LBS | recipesearch, Beschprchung mit Projektpartner (Funktionalität Such und Filter) | mir fällt nichts ein | []()
+05.03.2025| 1.3.2 | 11:30-12:20 | 2h20min | LBS | recipesearch, Such/ Filterfunktionen| mir fällt nichts ein | []()
 XX.XX.XXXX| X.X.X.X. | XX:XX-XX:XX | XhXXmin | LBS | XXX | mir fällt nichts ein | []()
 
 
