@@ -57,4 +57,5 @@ Datum|AP NR|Zeitraum|Aufwand|Ort|Tätigkeit|Probleme|Quellen
 27.02.2025| 1.3.2 | 09:25-12:50 | 3h25min | LBS | Preferenzen View einbauen |  | []()
 28.02.2025| 1.3.2 | 07:30-10:15 | 2h45min | LBS | Pantry View einbauen | | []()
 03.03.2025| 1.3.2 | 13:20-15:40 | 2h20min | LBS | Pantry View einbauen | | []()
+05.03.2025| 1.3.2 | 09:00-10:00 | 1h00min | LBS | Recipesearch: Beschprchung mit Projektpartnerin (Funktionalität Such und Filter) | mir fällt nichts ein | []()
 XX.XX.XXXX| X.X.X.X. | XX:XX-XX:XX | XhXXmin | LBS | XXX | mir fällt nichts ein | []()
