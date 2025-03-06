@@ -9,7 +9,8 @@
     <!-- CSS -->
     <link rel="stylesheet" href="<?php echo Config::get('URL'); ?>css/style.css"/>
     <link rel="stylesheet" href="<?php echo Config::get('URL'); ?>css/normalize.css"/>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=local_dining" />
+    <link rel="stylesheet"
+          href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=local_dining"/>
 
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"
             integrity="sha384-vtXRMe3mGCbOeY7l30aIg8H9p3GdeSe4IFlP6G8JMa7o7lXvnz3GFKzPxzJdPfGK"
@@ -20,23 +21,9 @@
 
     <!-- JS MULTISELECT -->
     <script src="../public/js/multiselect.js"></script>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
-
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-
-    <script>
-        $(document).ready(function () {
-            $('#userTable').DataTable({
-                responsive: true, // Makes the table responsive
-                paging: true,     // Adds pagination
-                searching: true,  // Enables the search box
-                order: [[0, 'asc']], // Orders by the first column (ID)
-            });
-        });
-    </script>
-
-
-
+    <!-- CSS MULTISELECT -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
 
 </head>
 <body>

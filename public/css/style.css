@@ -215,11 +215,6 @@ body {
     background: white;
 }
 
-.navigation-submenu li {
-    max-width: 200px;
-    width: 200px;
-}
-
 .navigation li a {
     display: block;
     text-decoration: none;
