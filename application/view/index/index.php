@@ -1,7 +1,5 @@
 <div class="container">
-    <h1>Eat Delicious Food With Pandoras Kitchen</h1>
     <div class="box">
-
         <!-- echo out the system feedback (error and success messages) -->
         <?php $this->renderFeedbackMessages(); ?>
         <section class="story">
@@ -51,9 +49,9 @@
         <div class="spacer_img home"></div>
 
         <div class="box">
-            <h1>Unsere Highlights</h1>
+            <h1>Our Highlights</h1>
             <div class="teaser-wrapper">
-                <a href="#" class="teaser teaser_img1">
+                <a href="<?php echo Config::get('URL'); ?>recipesearch/index" class="teaser teaser_img1">
                     <h2 class="text_background">Rezeptplaner</h2>
                     <p class="text_background">Dies ist eine kurze Beschreibung.</p>
                 </a>

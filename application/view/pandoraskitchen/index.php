@@ -29,12 +29,12 @@
             <h3>Meet the Team</h3>
             <div class="team">
                 <div class="team-member">
-                    <img class="member" src="http://localhost/Pandora-s-Kitchen/images/woman-1353211_1280.png" alt="">
+                    <img src="<?= Config::get('URL'); ?>/images/woman-1353211_1280.png" alt="">
                     <p class="name">Alice Johnson</p>
                     <p class="role">Founder & CEO</p>
                 </div>
                 <div class="team-member">
-                    <img class="member" src="http://localhost/Pandora-s-Kitchen/images/man-2700445_1280.png" alt="">
+                    <img src="<?= Config::get('URL'); ?>/images/man-2700445_1280.png" alt="">
                     <p class="name">Bob Smith</p>
                     <p class="role">Lead Developer</p>
                 </div>
@@ -48,17 +48,17 @@
             <p>Discover how Pandora's Kitchen simplifies your meal planning process with just a few easy steps:</p>
             <div class="steps">
                 <div class="step" >
-                    <img src="http://localhost/Pandora-s-Kitchen/images/illustration-des-persoenlichen-einstellungskonzepts_114360-2251.jpg" alt="Step 1" class="step-icon">
+                    <img src="<?= Config::get('URL'); ?>/images/illustration-des-persoenlichen-einstellungskonzepts_114360-2251.jpg" alt="Step 1" class="step-icon">
                     <h3>Choose Your Preferences</h3>
                     <p>Select your dietary preferences, restrictions, and goals.</p>
                 </div>
                 <div class="step" >
-                    <img src="http://localhost/Pandora-s-Kitchen/images/rezeptbuchkonzeptillustration_114360-7481.jpg" alt="Step 2" class="step-icon">
+                    <img src="<?= Config::get('URL'); ?>/images/rezeptbuchkonzeptillustration_114360-7481.jpg" alt="Step 2" class="step-icon">
                     <h3>Get Recipe Suggestions</h3>
                     <p>Receive personalized recipe suggestions based on your ingredients.</p>
                 </div>
                 <div class="step" >
-                    <img src="http://localhost/Pandora-s-Kitchen/images/abbildung-des-essenskonzepts-bestellen_114360-7070.png" alt="Step 3" class="step-icon">
+                    <img src="<?= Config::get('URL'); ?>/images/abbildung-des-essenskonzepts-bestellen_114360-7070.png" alt="Step 3" class="step-icon">
                     <h3>Plan & Shop</h3>
                     <p>Plan your meals and generate shopping lists automatically.</p>
                 </div>

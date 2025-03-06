@@ -215,6 +215,11 @@ body {
     background: white;
 }
 
+.navigation-submenu li {
+    max-width: 200px;
+    width: 200px;
+}
+
 .navigation li a {
     display: block;
     text-decoration: none;
@@ -735,4 +740,60 @@ body {
 .step p {
     font-size: 1rem;
     color: #7f8c8d;
+}
+
+
+/* ============================ MULTI SELECT ============================ */
+
+.multi-select {
+    position: relative;
+    width: 300px;
+}
+.multi-select select {
+    display: none;
+}
+.multi-select .select-box {
+    border: 1px solid #ccc;
+    padding: 8px;
+    border-radius: 5px;
+    cursor: pointer;
+    background: #222;
+    color: #fff;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+}
+.multi-select .chip {
+    background: #444;
+    color: #fff;
+    padding: 5px 10px;
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+}
+.multi-select .chip .remove {
+    margin-left: 8px;
+    cursor: pointer;
+    font-weight: bold;
+}
+.multi-select .dropdown-list {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background: #222;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    max-height: 200px;
+    overflow-y: auto;
+}
+.multi-select .dropdown-list label {
+    display: block;
+    padding: 8px;
+    cursor: pointer;
+    color: #fff;
+}
+.multi-select .dropdown-list label:hover {
+    background: #444;
 }
