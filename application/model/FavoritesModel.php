@@ -27,7 +27,7 @@ class FavoritesModel
     // Loop through each favorite and get analyzed instructions
     foreach ($favorites as $favorite) {
         $recipeId = $favorite['recipe_id'];
-        $instructions[$recipeId] = $spoonacular->analyzedInstructions($recipeId);
+        $instructions[$recipeId] = $spoonacular->information($recipeId);
     }
 
     return $instructions;

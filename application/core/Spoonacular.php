@@ -14,7 +14,7 @@ class Spoonacular
     }
 
 
-	public function complexSearch($query, $diet = null, $intolerances = null, $includeIngredients = null, $excludeIngredients = null, $sort = null, $number = 10, $addRecipeInformation = true, $addRecipeInstructions = true, $addRecipeNutrition = false)
+	public function complexSearch($query, $diet = null, $intolerances = null, $includeIngredients = null, $excludeIngredients = null, $sort = null, $number = 4, $addRecipeInformation = true, $addRecipeInstructions = true, $addRecipeNutrition = false)
 	{
 		$query = urlencode($query); // Sanitize user input
 		$url = "https://api.spoonacular.com/recipes/complexSearch?query=$query";
@@ -54,8 +54,44 @@ class Spoonacular
 		return $data;
 	}
 
-	public function analyzedInstructions($id, $stepBreakdown=false) {
-		
+	public function information($id, $includeNutrition=false) {
+		$query = urlencode($query); // Sanitize user input
+		$url = "https://api.spoonacular.com/recipes/information?id=$id";
+
+		// Add optional parameters if they are provided
+		if ($includeNutrition) {
+			$url .= "&includeNutrition=true";
+		}
+
+		$url .= "&apiKey=" . self::$apiKey;
+
+		$response = file_get_contents($url);
+		$data = json_decode($response, true);
+
+		return $data;
 	}
 
+	public function ingredientSearch($query, $intolerances=null, $sort=null, $sortDirection=null, $number=4) {
+		$query = urlencode($query); // Sanitize user input
+		$url = "https://api.spoonacular.com/food/ingredients/search?query=$query";
+
+		// Add optional parameters if they are provided
+		if (!empty($intolerances)) {
+			$url .= "&intolerances=" . urlencode($intolerances);
+		}
+		if (!empty($sort)) {
+			$url .= "&sort=" . urlencode($sort);
+		}
+		if (!empty($sortDirection)) {
+			$url .= "&sortDirection=" . urlencode($sortDirection);
+		}
+
+		$url .= "&number=" . intval($number);
+		$url .= "&apiKey=" . self::$apiKey;
+
+		$response = file_get_contents($url);
+		$data = json_decode($response, true);
+
+		return $data;
+	}
 }
