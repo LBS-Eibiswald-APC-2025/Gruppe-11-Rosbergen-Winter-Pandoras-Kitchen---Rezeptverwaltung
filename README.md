@@ -29,8 +29,10 @@ Datum|AP NR|Zeitraum|Aufwand|Ort|Tätigkeit|Probleme|Quellen
 04.03.2025| 1.3.2 | 10:00-12:20 | 2h20min | LBS | recipesearch erstellt, recherche für Suche und Filterung | mir fällt nichts ein | []()
 06.03.2025| 1.3.2 | 09:00-10:00 | 1h00min | LBS | recipesearch, Beschprechung mit Projektpartner (Funktionalität Such und Filter) | mir fällt nichts ein | []()
 06.03.2025| 1.3.2 | 11:30-12:20 | 2h20min | LBS | recipesearch, Such/ Filterfunktionen| mir fällt nichts ein | []()
-07.03.2025| 1.3.2 | 08:00-xx:xx | xhxxmin | LBS | recipesearch Formular erstellt, Batenbanktabelle searchterms erstellt und befüllt, Such / Filterfunktionen, erweitern| mir fällt nichts ein | []()
-11.03.2025| 1.3.2 | 10:00-12:20 | 2h20min | LBS | recipesearch Formular erstellt, Batenbanktabelle searchterms erstellt und befüllt, Such / Filterfunktionen, erweitern |  | []()
+07.03.2025| 1.3.2, 1.3.3 | 08:00-10:15 | 2h15min | LBS | recipesearch Formular erstellt, Batenbanktabelle searchterms erstellt und befüllt, Such / Filterfunktionen, erweitern| mir fällt nichts ein | []()
+11.03.2025| 1.3.2, 1.3.3 | 10:00-12:20 | 2h20min | LBS | recipesearch Formular erstellt, Batenbanktabelle searchterms erstellt und befüllt, Such / Filterfunktionen, erweitern |  | []()
+13.03.2025| 1.2.5 | 09:25-11:25 | 2h00min | LBS | Inhaltsverzeichniserstellt, Seitenanzahl, Autor Kürzel |  | []()
+13.03.2025| 1.3.2, 1.3.3 | 09:25-12:50 | XXhxxmin | LBS | recipesearch Formular erstellt, SQL inserts für diverse terms, Such / Filterfunktionen, erweitern |  | []()
 XX.XX.XXXX| X.X.X.X. | XX:XX-XX:XX | XhXXmin | LBS | XXX | mir fällt nichts ein | []()
 
 
@@ -63,4 +65,5 @@ Datum|AP NR|Zeitraum|Aufwand|Ort|Tätigkeit|Probleme|Quellen
 06.03.2025| 1.3.2 | 10:00-12:50 | 2h50min | LBS | Hilfe bei RecipeSearch, Vorbereitung von Spoonacular Einbindung | Tag war etwas seltsam aufgeteilt | []()
 07.03.2025| 1.3.2 | 07:30-10:15 | 2h45min | LBS | Menüpläne erstellt |  | []()
 11.03.2025| 1.3.2 | 10:00-12:20 | 2h20min | LBS | User und Zutaten View angepasst |  | []()
+13.03.2025| 1.2.5 | 09:25-11:25 | 2h00min | LBS | Inhaltsverzeichniserstellt, Seitenanzahl, Autor Kürzel |  | []()
 XX.XX.XXXX| X.X.X.X. | XX:XX-XX:XX | XhXXmin | LBS | XXX | mir fällt nichts ein | []()
