@@ -12,6 +12,17 @@ class RecipeSearchController extends Controller
 
     public function index()
     {
-        $this->View->render('recipesearch/index');
+        $this->View->render('recipesearch/index', array(
+            'types' => RecipeSearchModel::getSearchTerms('type', "searchterms"),
+            'cuisine' => RecipeSearchModel::getSearchTerms('cuisine', "searchterms"),
+            'diet' => RecipeSearchModel::getSearchTerms('diet', "preferences"),
+            'allergen' => RecipeSearchModel::getSearchTerms('allergen', "preferences"),
+        ));
     }
+
+    public function advancedSearch()
+    {
+        $this->View->render('recipesearch/advancedSearch');
+    }
+
 }

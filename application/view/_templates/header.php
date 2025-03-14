@@ -9,6 +9,9 @@
     <!-- CSS -->
     <link rel="stylesheet" href="<?php echo Config::get('URL'); ?>css/style.css"/>
     <link rel="stylesheet" href="<?php echo Config::get('URL'); ?>css/normalize.css"/>
+
+    <!-- Fonts -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet"
           href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=local_dining"/>
 
@@ -22,6 +25,7 @@
     <!-- JS MULTISELECT -->
     <script src="../public/js/multiselect.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
     <!-- CSS MULTISELECT -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
 
@@ -98,7 +102,7 @@
                             } ?> >
                                 <a href="<?php echo Config::get('URL'); ?>user/changePassword">Set Password</a>
                             </li>
-                            <li <?php if (View::checkForActiveController($filename, "login")) {
+                            <li class="navigation-submenu-last-element" <?php if (View::checkForActiveController($filename, "login")) {
                                 echo ' class="active" ';
                             } ?> >
                                 <a href="<?php echo Config::get('URL'); ?>login/logout">Logout</a>
