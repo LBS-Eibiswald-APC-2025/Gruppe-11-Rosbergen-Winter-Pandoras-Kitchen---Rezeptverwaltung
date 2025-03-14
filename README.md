@@ -33,7 +33,7 @@ Datum|AP NR|Zeitraum|Aufwand|Ort|Tätigkeit|Probleme|Quellen
 11.03.2025| 1.3.2, 1.3.3 | 10:00-12:20 | 2h20min | LBS | recipesearch Formular erstellt, Batenbanktabelle searchterms erstellt und befüllt, Such / Filterfunktionen, erweitern |  | []()
 13.03.2025| 1.2.5 | 09:25-11:25 | 2h00min | LBS | Inhaltsverzeichnis für Dokumentation erstellt, Seitenanzahl, Autor Kürzel |  | []()
 13.03.2025| 1.3.2, 1.3.3 | 11:25-12:50 | 1h25min | LBS | recipesearch Formular erstellt, SQL inserts für diverse terms, Such / Filterfunktionen, erweitern |  | []()
-13.03.2025| 1.3.2, 1.3.3 | 07:45-xx:xx | xhxxmin | LBS | recipesearch Formular erstellt, SQL inserts für diverse terms, Such / Filterfunktionen, erweitern |  | []()
+14.03.2025| 1.3.2, 1.3.3 | 07:45-10:15 | 2h30min | LBS | recipesearch Formular erstellt, SQL inserts für diverse terms, Such / Filterfunktionen, erweitern |  | []()
 XX.XX.XXXX| X.X.X.X. | XX:XX-XX:XX | XhXXmin | LBS | XXX | mir fällt nichts ein | []()
 
 
@@ -67,4 +67,5 @@ Datum|AP NR|Zeitraum|Aufwand|Ort|Tätigkeit|Probleme|Quellen
 07.03.2025| 1.3.2 | 07:30-10:15 | 2h45min | LBS | Menüpläne erstellt |  | []()
 11.03.2025| 1.3.2 | 10:00-12:20 | 2h20min | LBS | User und Zutaten View angepasst |  | []()
 13.03.2025| 1.2.5 | 09:25-11:25 | 2h00min | LBS | Inhaltsverzeichniserstellt, Seitenanzahl, Autor Kürzel |  | []()
+14.03.2025| 1.3.2, 1.3.3 | 07:45-10:15 | 2h30min | LBS | Zutatensuche gemacht |  | []()
 XX.XX.XXXX| X.X.X.X. | XX:XX-XX:XX | XhXXmin | LBS | XXX | mir fällt nichts ein | []()
