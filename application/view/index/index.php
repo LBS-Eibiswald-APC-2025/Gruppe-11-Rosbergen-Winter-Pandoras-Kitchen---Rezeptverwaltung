@@ -42,24 +42,21 @@
                 way
                 to a healthier and more enjoyable life.
             </p>
-
         </section>
 
-
         <div class="spacer_img home"></div>
-
         <div class="box">
             <h1>Our Highlights</h1>
             <div class="teaser-wrapper">
-                <a href="<?php echo Config::get('URL'); ?>recipesearch/index" class="teaser teaser_img1">
-                    <h2 class="text_background">Rezeptplaner</h2>
+                <a href="<?php echo Config::get('URL'); ?>planner/index" class="teaser teaser_img1">
+                    <h2 class="text_background">Recipe planner</h2>
+                    <p class="text_background">Meal planning made easy...</p>
+                </a>
+                <a href="<?php echo Config::get('URL'); ?>recipesearch/index" class="teaser teaser_img3">
+                    <h2 class="text_background">Recipe Search</h2>
                     <p class="text_background">Dies ist eine kurze Beschreibung.</p>
                 </a>
-                <a href="#" class="teaser teaser_img2">
-                    <h2 class="text_background">Recipes</h2>
-                    <p class="text_background">Dies ist eine kurze Beschreibung.</p>
-                </a>
-                <a href="#" class="teaser teaser_img3">
+                <a href="<?php echo Config::get('URL'); ?>register/index" class="teaser teaser_img2">
                     <h2 class="text_background">Register</h2>
                     <p class="text_background">Dies ist eine kurze Beschreibung.</p>
                 </a>

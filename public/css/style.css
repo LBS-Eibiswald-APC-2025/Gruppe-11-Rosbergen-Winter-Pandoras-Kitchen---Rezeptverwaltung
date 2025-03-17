@@ -50,6 +50,8 @@ body {
 .spacer_img {
     height: 261px;
     margin: auto;
+    background-size: 100% auto;
+    background-repeat: no-repeat;
     background-image: url("../images/salad-2068217_1920.jpg");
 }
 
@@ -60,6 +62,8 @@ body {
 .header_img {
     height: 261px;
     margin: auto;
+    background-size: 100% auto;
+    background-repeat: no-repeat;
     background-image: url("../images/mediterranean-cuisine-2378758_1920.jpg");
 }
 
@@ -116,17 +120,17 @@ body {
 }
 
 .teaser_img1 {
-    background-image: url('http://localhost/Pandora-s-Kitchen/images/flat-lay-charts-organic-food-lunch-boxes.jpg');
+    background-image: url('../images/flat-lay-charts-organic-food-lunch-boxes.jpg');
     background-size: cover;
 }
 
 .teaser_img2 {
-    background-image: url('http://localhost/Pandora-s-Kitchen/images/assortment-different-delicious-ingredients.jpg');
+    background-image: url('../images/assortment-different-delicious-ingredients.jpg');
     background-size: cover;
 }
 
 .teaser_img3 {
-    background-image: url('http://localhost/Pandora-s-Kitchen/images/person-using-laptop.jpg');
+    background-image: url('../images/person-using-laptop.jpg');
     background-size: cover;
 }
 
@@ -135,6 +139,7 @@ body {
     padding: 20px;
     border-radius: 10px;
 }
+
 .teaser:hover {
     transform: scale(1.05);
 }
@@ -220,18 +225,28 @@ body {
     text-decoration: none;
     padding: 10px 15px;
     border: 1px solid white;
-    background: white;
+    border-radius: 4px;
+    background: rgb(92, 225, 230);
     color: black;
     float: none;
     font-size: 13px;
     text-transform: uppercase;
-    /*font-weight: bold;*/
+    font-weight: bold;
 }
 
 .navigation li:hover .navigation-submenu {
     display: block;
     position: absolute;
     float: left;
+}
+
+.navigation-submenu-last-element {
+    -webkit-border-bottom-right-radius: 4px;
+    -webkit-border-bottom-left-radius: 4px;
+    -moz-border-radius-bottomright: 4px;
+    -moz-border-radius-bottomleft: 4px;
+    border-bottom-right-radius: 4px;
+    border-bottom-left-radius: 4px;
 }
 
 .navigation li:hover li,
@@ -496,6 +511,19 @@ body {
     left: 0;
 }
 
+
+.list-container {
+    width: 300px;
+}
+
+.list-header {
+    color: white;
+    padding: 10px 0;
+    font-weight: bold;
+    text-align: left;
+}
+
+
 .footer li a:hover {
     color: #5ce1e6;
 }
@@ -508,14 +536,15 @@ body {
 }
 
 .footer-nav li {
-    display: inline;
-    margin: 0 15px;
+    padding: 0;
+    margin: 0;
 }
+
 
 .footer-nav a {
     color: white;
     text-decoration: none;
-    padding: 10px 15px;
+    /* padding: 10px 15px; */
 }
 
 .social-icons {
@@ -676,7 +705,7 @@ body {
     color: #7f8c8d;
 }
 
-/*======================= HOW IT WORKS ==================================*/
+/*======================= HOW IT WORKS SELECT ==================================*/
 
 .how-it-works {
     background-color: rgba(44, 62, 80, 0.16);
@@ -738,27 +767,106 @@ body {
 }
 
 
+/* ================================ ADVANCED SEARCH =================================== */
+
+.form-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px 20px 80px 20px;
+    background-color: #fff;
+    border-radius: 4px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.search-bar,
+.filters,
+.sort-options {
+    margin-bottom: 20px;
+}
+
+.search-bar input[type="text"],
+.filters select,
+.filters input[type="checkbox"],
+.filters input[type="number"] {
+    display: block;
+    width: 300px;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    background: white;
+}
+
+select {
+    appearance: none;  /* Standard für moderne Browser */
+    -webkit-appearance: none; /* Safari & ältere WebKit-Browser */
+    -moz-appearance: none; /* Firefox */
+    background-image: none; /* Falls ein Hintergrundbild als Pfeil gesetzt ist */
+}
+
+.filters h3,
+.sort-options h3 {
+    margin-bottom: 10px;
+}
+
+.filters input[type="checkbox"] {
+    width: auto;
+    margin-right: 10px;
+}
+
+.sort-options select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+.submit-button {
+    padding: 10px 20px;
+    background-color: #007BFF;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.submit-button:hover {
+    background-color: #0056b3;
+}
+
+.smallPaddingLeft {
+    padding-left: 10px;
+}
+
 /* ============================ MULTI SELECT ============================ */
 
-.multi-select {
+.select {
     position: relative;
     width: 300px;
+    margin-bottom: 20px;
 }
-.multi-select select {
+
+.select select {
     display: none;
 }
-.multi-select .select-box {
+
+.select .select-box {
     border: 1px solid #ccc;
     padding: 8px;
     border-radius: 5px;
     cursor: pointer;
-    background: #222;
-    color: #fff;
+    background: #fff;
+    color: #222;
     display: flex;
     flex-wrap: wrap;
     gap: 5px;
 }
-.multi-select .chip {
+
+.checkbox-hidden {
+    display: none;
+}
+
+.select .chip {
     background: #444;
     color: #fff;
     padding: 5px 10px;
@@ -766,29 +874,71 @@ body {
     display: flex;
     align-items: center;
 }
-.multi-select .chip .remove {
+
+.select .chip .remove {
     margin-left: 8px;
     cursor: pointer;
     font-weight: bold;
 }
-.multi-select .dropdown-list {
+
+.select .dropdown-list {
     display: none;
     position: absolute;
     top: 100%;
     left: 0;
     width: 100%;
-    background: #222;
+    background: #fff;
+    color: #222;
     border: 1px solid #ccc;
     border-radius: 5px;
     max-height: 200px;
     overflow-y: auto;
+    z-index: 1;
 }
-.multi-select .dropdown-list label {
+
+.select .dropdown-list label {
     display: block;
-    padding: 8px;
+    padding: 2px 4px;
     cursor: pointer;
-    color: #fff;
+    color: #222;
 }
-.multi-select .dropdown-list label:hover {
-    background: #444;
+
+.select .dropdown-list label:hover {
+    background: rgba(92, 225, 230, 0.31);
+}
+
+.footer-nav {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+
+}
+
+li {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+/* ========================= Input Style ============================ */
+
+input {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+/* Entfernt die Pfeile in Chrome, Safari und Edge */
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+/* Entfernt die Pfeile in Firefox */
+input[type="number"] {
+    -moz-appearance: textfield;
 }
