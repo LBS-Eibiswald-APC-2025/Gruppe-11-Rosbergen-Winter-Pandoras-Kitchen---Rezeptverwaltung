@@ -22,20 +22,33 @@ class PantryController extends Controller
     }
 
 	/**
-     * Update pantry
+     * Add new item to pantry, based on POSTed name
      */
-	public function update()
-	{
-		PantryModel::clearPantry(); 
-	
-		if (!empty($_POST['pantry'])) {
-			foreach ($_POST['pantry'] as $pantryItem) {
-				PantryModel::addPantryItem($pantryItem);
-			}
-		}
-	
+    public function addItem()
+    {
+		$spoonacular = Spoonacular::getInstance();
+
+		$ingredientName = $_POST['ingredient_name'];
+		$data = $spoonacular->ingredientSearch($ingredientName, null, null, null, 1); // !! TODO add intolerances
+
+		// Extract the ID from the first result in the response, Use null coalescing to avoid errors if no results are found
+		$ingredientID = $data['results'][0]['id'] ?? null; 
+		$ingredientID = $data['results'][0]['name'] ?? null; 
+		$ingredientID = $data['results'][0]['original'] ?? null; 
+		$ingredientID = $data['results'][0]['originalName'] ?? null; 
+
+		PantryModel::addPantryItem($ingredientID);
 		Redirect::to('user/index?active=pantry');
+    }
 
+    /**
+     * Delete item from the pantry based on ID
+     */
+    public function deleteItem()
+    {
+		// !! TODO Replace GETs with POSTs
+		$itemId = $_GET['item_id'];
+		PantryModel::deletePantryItem($itemId); // Pass the item ID to the model
+		Redirect::to('user/index?active=pantry');
 	}
-
 }

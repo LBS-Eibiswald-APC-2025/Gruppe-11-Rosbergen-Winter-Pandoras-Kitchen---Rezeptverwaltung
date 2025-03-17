@@ -42,18 +42,19 @@ class FavoritesModel
     {
         $database = DatabaseFactory::getFactory()->getConnection();
 
-        $sql = "INSERT IGNORE INTO user_preferences (user_id, preference_id) VALUES (:user_id, :preference_id)";
+        $sql = "INSERT IGNORE INTO user_favorites (user_id, favorite_id) VALUES (:user_id, :favorite_id)";
         $query = $database->prepare($sql);
-        $query->execute(array(':user_id' => Session::get('user_id'), ':preference_id' => $preference));
+        $query->execute(array(':user_id' => Session::get('user_id'), ':favorite_id' => $favorite));
     }
 
 	/**
-    * Delete a favorite from the user
+    * Remove a favorite from the user
     */
 	public static function deleteFavorite($favorite)
 	{
 		$database = DatabaseFactory::getFactory()->getConnection();
-		$query = $database->prepare("DELETE FROM user_preferences WHERE user_id = :user_id");
+		$query = $database->prepare("DELETE FROM user_favorites WHERE favorite_id = :favorite_id");
 		$query->execute([":user_id" => Session::get('user_id')]);
 	}
+	
 }

@@ -26,7 +26,7 @@ INSERT INTO preferences (name, type) VALUES
 ('Wheat', 'allergen');
 
 INSERT INTO preferences (name, type) VALUES
-('Fluten Free', 'diet'),
+('Gluten Free', 'diet'),
 ('Keto', 'diet'),
 ('Vegetarian', 'diet'),
 ('Lacto-Vegetarian', 'diet'),

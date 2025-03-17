@@ -22,7 +22,7 @@ class PreferencesController extends Controller
     }
 
 	/**
-     * Update preferences
+     * Update preferences, deleting all previous ones and adding those in POST
      */
 	public function update()
 	{

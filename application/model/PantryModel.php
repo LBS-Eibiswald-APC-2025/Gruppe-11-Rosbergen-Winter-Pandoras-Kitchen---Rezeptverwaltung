@@ -10,10 +10,9 @@ class PantryModel
         $userId = Session::get('user_id');
 		$database = DatabaseFactory::getFactory()->getConnection();
 
-		$sql = "SELECT p.id, p.name, p.type, 
-					   IF(up.user_id IS NOT NULL, TRUE, FALSE) AS checked
-				FROM pantry p
-				LEFT JOIN user_pantry up ON p.id = up.item_id AND up.user_id = :user_id";
+		$sql = "SELECT item_id 
+		FROM user_pantry
+		WHERE user_id = :user_id";
 		
 		$query = $database->prepare($sql);
 		
@@ -25,7 +24,7 @@ class PantryModel
 
     /**
      * Add a new pantry item for the user
-     * @param string $pantryItem
+     * @param string $pantryItem ID
      */
     public static function addPantryItem($pantryItem)
     {
@@ -36,10 +35,14 @@ class PantryModel
         $query->execute(array(':user_id' => Session::get('user_id'), ':item_id' => $pantryItem));
     }
 
-	public static function clearPantry()
+	// Delete an item from the user's pantry
+	public static function deletePantryItem($pantryItem)
 	{
 		$database = DatabaseFactory::getFactory()->getConnection();
-		$query = $database->prepare("DELETE FROM user_pantry WHERE user_id = :user_id");
-		$query->execute([":user_id" => Session::get('user_id')]);
+	
+		$sql = "DELETE FROM user_pantry WHERE user_id = :user_id AND item_id = :item_id";
+		$query = $database->prepare($sql);
+		$query->execute(array(':user_id' => Session::get('user_id'), ':item_id' => $pantryItem));
 	}
+	
 }

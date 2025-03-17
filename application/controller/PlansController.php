@@ -13,6 +13,8 @@ class PlansController extends Controller
 
     public function index()
     {
-        $this->View->renderWithoutHeaderAndFooter('plans/index');
+        $this->View->renderWithoutHeaderAndFooter('plans/index', array(
+            'plans' => PlansModel::getUserPlans()
+		));
     }
 }
