@@ -5,23 +5,28 @@
 
     <div>
         <?php
-		$spoonacular = Spoonacular::getInstance();
+		$database = DatabaseFactory::getFactory()->getConnection();
         $ingredients = [];
 
-        // Store user pantry in an array
-        if (!empty($this->pantry)) {
-            foreach ($this->pantry as $ingredient) {
+		// Store user pantry in an array
+		if (!empty($this->pantry)) {
+			foreach ($this->pantry as $ingredient) {
 				
-				// !! TODO: Instead of doing it like this, store names and image in our own DB. Do this without redundancy
-				$data = $spoonacular->information($ingredient->item_id);
-				$ingredients[] = [
-					'id' => $data['id'],
-					'name' => $data['name'],
-					'originalName' => $data['originalName'],
-					'image' => $data['image']
-				];
-            }
-        }
+				// Retrieve ingredient data from the database
+				$sql = "SELECT id, ingredientName FROM pantry WHERE id = :item_id";
+				$query = $database->prepare($sql);
+				$query->execute([':item_id' => $ingredient->item_id]);
+				$ingredientData = $query->fetch(PDO::FETCH_ASSOC);
+
+				if ($ingredientData) {
+					$ingredients[] = [
+						'id' => $ingredientData['id'],
+						'name' => $ingredientData['ingredientName']
+					];
+				}
+			}
+		}
+
 		
 
 		// Show ingredients as a list with a delete link
@@ -29,7 +34,7 @@
 			echo "<ul>";
 			foreach ($ingredients as $ingredient) {
 				// Convert only the first letter to uppercase and keep the rest the same
-				$ingredientName = ucfirst(strtolower(htmlspecialchars($ingredient['originalName'])));
+				$ingredientName = ucfirst(strtolower(htmlspecialchars($ingredient['ingredientName'])));
 
 				echo "<li>" . $ingredientName . " 
 					<a href='" . Config::get('URL') . "pantry/deleteItem?item_id=" . htmlspecialchars($ingredient['id']) . "' 

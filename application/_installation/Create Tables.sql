@@ -26,9 +26,11 @@ CREATE TABLE IF NOT EXISTS user_preferences
 
 CREATE TABLE IF NOT EXISTS pantry
 (
-    id   INT AUTO_INCREMENT PRIMARY KEY,
-    name VARCHAR(255) UNIQUE NOT NULL,
-    type VARCHAR(50)         NOT NULL
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    ingredientName VARCHAR(255) NOT NULL,
+	ingredientOriginal VARCHAR(255) NOT NULL,
+	ingredientOriginalName VARCHAR(255) NOT NULL,
+    type VARCHAR(50) NOT NULL
 );
 
 
@@ -50,6 +52,18 @@ CREATE TABLE IF NOT EXISTS user_favorites
     recipe_id INT NOT NULL,
     PRIMARY KEY (user_id, recipe_id),
     FOREIGN KEY (user_id) REFERENCES users (user_id) ON DELETE CASCADE
+);
+
+CREATE TABLE IF NOT EXISTS plans(
+    id INT AUTO_INCREMENT PRIMARY KEY
+);
+
+CREATE TABLE IF NOT EXISTS user_plans (
+    user_id INT NOT NULL,
+    plan_id INT NOT NULL,
+    PRIMARY KEY (user_id, plan_id),
+    FOREIGN KEY (user_id) REFERENCES users(user_id) ON DELETE CASCADE,
+    FOREIGN KEY (plan_id ) REFERENCES plans(id) ON DELETE CASCADE
 );
 
 /* Search Terms*/

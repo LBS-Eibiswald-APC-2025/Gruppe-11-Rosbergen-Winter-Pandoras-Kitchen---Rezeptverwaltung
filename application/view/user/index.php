@@ -3,88 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <title>Pandora's Kitchen</title>
-    <style>
-        .container {
-            margin: 20px auto;
-            display: flex;
-        }
-        #user-menu-container {
-            width: 220px;
-            min-width: 220px;
-            max-width: 220px;
-            margin-right: 20px;
-            position: -webkit-sticky;
-            position: sticky;
-            top: 20px;
-            background-color: #f0f0f0;
-            padding: 10px;
-            border: 1px solid #ddd;
-            border-radius: 5px;
-            height: fit-content;
-        }
-        #user-menu-container h2 {
-            margin-top: 0;
-            font-size: 1.2em;
-            text-align: center;
-            margin-bottom: 10px;
-        }
-        .nav {
-            list-style: none;
-            padding: 0;
-            margin: 0;
-        }
-        .nav li {
-            margin-bottom: 5px;
-        }
-        .nav > li > a {
-            display: block;
-            width: 90%;
-            margin: 0 auto;
-            padding: 10px;
-            text-decoration: none;
-            color: #333;
-            background-color: #ddd;
-            border-radius: 4px;
-        }
-        .nav > li.active > a {
-            font-weight: bold;
-            background-color: #ccc;
-        }
-        .nav > li > a:hover {
-            background-color: #bbb;
-        }
-        #content-container {
-            flex-grow: 1;
-            padding: 20px;
-            background-color: white;
-            border-radius: 5px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            position: relative;
-        }
-        .box {
-            border: 1px solid #ddd;
-            padding: 20px;
-            border-radius: 5px;
-            background: #fff;
-        }
-        /* Loading spinner styles */
-        .loading-spinner {
-            border: 4px solid #f3f3f3;
-            border-top: 4px solid #3498db;
-            border-radius: 50%;
-            width: 30px;
-            height: 30px;
-            animation: spin 1s linear infinite;
-            margin: 0 auto;
-        }
-        @keyframes spin {
-            0% { transform: rotate(0deg); }
-            100% { transform: rotate(360deg); }
-        }
-    </style>
 </head>
 <body>
-    <div class="container">
+    <div class="user-options-container">
         <!-- Left side menu -->
         <div id="user-menu-container">
             <h2>
@@ -93,7 +14,7 @@
                 </a>
             </h2>
             <nav>
-                <ul class="nav" id="side-menu">
+                <ul class="nav-user" id="side-menu">
                     <?php foreach ($this->menu_items as $item): ?>
                         <li>
                             <a href="<?= $item['url']; ?>" class="menu-link" data-label="<?= $item['label']; ?>" data-active="<?= $item['active']; ?>">

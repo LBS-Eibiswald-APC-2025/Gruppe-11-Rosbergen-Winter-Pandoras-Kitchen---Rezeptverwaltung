@@ -27,17 +27,16 @@ class PantryController extends Controller
     public function addItem()
     {
 		$spoonacular = Spoonacular::getInstance();
+		$ingredientInput = $_POST['ingredient_name'];
+		$data = $spoonacular->ingredientSearch($ingredientInput, null, null, null, 1); // !! TODO add intolerances
 
-		$ingredientName = $_POST['ingredient_name'];
-		$data = $spoonacular->ingredientSearch($ingredientName, null, null, null, 1); // !! TODO add intolerances
-
-		// Extract the ID from the first result in the response, Use null coalescing to avoid errors if no results are found
+		// Extract the ID from the first result in the response. Use null coalescing to avoid errors if no results are found.
 		$ingredientID = $data['results'][0]['id'] ?? null; 
-		$ingredientID = $data['results'][0]['name'] ?? null; 
-		$ingredientID = $data['results'][0]['original'] ?? null; 
-		$ingredientID = $data['results'][0]['originalName'] ?? null; 
+		$ingredientName = $data['results'][0]['name'] ?? null; 
+		$ingredientOriginal = $data['results'][0]['original'] ?? null; 
+		$ingredientOriginalName = $data['results'][0]['originalName'] ?? null; 
 
-		PantryModel::addPantryItem($ingredientID);
+		PantryModel::addPantryItem($ingredientID, $ingredientName, $ingredientOriginal, $ingredientOriginalName);
 		Redirect::to('user/index?active=pantry');
     }
 

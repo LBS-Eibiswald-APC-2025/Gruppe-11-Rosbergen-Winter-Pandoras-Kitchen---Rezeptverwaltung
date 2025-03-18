@@ -11,7 +11,7 @@
         // Store user-selected preferences in an array
         if (!empty($this->preferences)) {
             foreach ($this->preferences as $preference) {
-                if ($preference->type == 'allergen') {
+                if ($preference->type == 'intolerances') {
                     // Map the allergen id to its name
                     $allergenOptions[$preference->id] = $preference->name;
                 }
@@ -26,7 +26,7 @@
             }
         }
         ?>
-		<h2>Allergens</h2>
+		<h2>Intolerances</h2>
 
         <?php
 			// Generate checkboxes using the mapping: key (id) as value, and the value (name) as the label.
