@@ -4,7 +4,7 @@
     <!-- echo out the system feedback (error and success messages) -->
     <?php $this->renderFeedbackMessages(); ?>
 
-    <div class="box">
+    <div class="box-user">
         <h2>Set new password</h2>
 
         <!-- new password form box -->

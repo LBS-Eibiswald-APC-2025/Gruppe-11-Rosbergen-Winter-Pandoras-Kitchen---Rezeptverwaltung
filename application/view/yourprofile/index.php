@@ -1,6 +1,6 @@
 
 <h1>Your Profile</h1>
-<div class="box">
+<div class="box-user">
 	<?php $this->renderFeedbackMessages(); ?>
 
 	<div>Your username: <?= $this->user_name; ?></div>

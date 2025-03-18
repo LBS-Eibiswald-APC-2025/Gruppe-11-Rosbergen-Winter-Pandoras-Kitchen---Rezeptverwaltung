@@ -1,6 +1,6 @@
 <div class="container">
     <h1>ProfileController/index</h1>
-    <div class="box">
+    <div class="box-user">
 
         <?php $this->renderFeedbackMessages(); ?>
 

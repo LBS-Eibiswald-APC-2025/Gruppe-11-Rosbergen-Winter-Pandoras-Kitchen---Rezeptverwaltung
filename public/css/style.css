@@ -1114,7 +1114,7 @@ input[type="number"] {
 	box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 	position: relative;
 }
-.box {
+.box-user {
 	border: 1px solid #ddd;
 	padding: 20px;
 	border-radius: 5px;

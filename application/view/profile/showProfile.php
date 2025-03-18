@@ -1,6 +1,6 @@
 <div class="container">
     <h1>ProfileController/showProfile/:id</h1>
-    <div class="box">
+    <div class="box-user">
 
         <!-- echo out the system feedback (error and success messages) -->
         <?php $this->renderFeedbackMessages(); ?>
