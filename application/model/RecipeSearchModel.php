@@ -21,13 +21,5 @@ class RecipeSearchModel
         return $query->fetchAll();
 
     }
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
 
 }
-=======
-}
->>>>>>> Stashed changes
-=======
-}
->>>>>>> Stashed changes
