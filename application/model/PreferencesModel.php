@@ -38,7 +38,7 @@ class PreferencesModel
     }
 
 	/**
-     * Clear preferences of the user
+     * Remove all preferences of the user
      */
 	public static function clearPreferences()
 	{

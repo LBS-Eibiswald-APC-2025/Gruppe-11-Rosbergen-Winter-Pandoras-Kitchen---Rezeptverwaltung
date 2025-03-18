@@ -30,11 +30,11 @@ class UserController extends Controller
 			'user_avatar_file' => Session::get('user_avatar_file'),
 			'user_account_type' => Session::get('user_account_type'),
 			'menu_items' => array(
-			['url' => Config::get('URL') . 'preferences', 'label' => 'Preferences'],
-			['url' => Config::get('URL') . 'favorites', 'label' => 'Favorites'],
-			['url' => Config::get('URL') . 'planner', 'label' => 'Make a Plan'],
-			['url' => Config::get('URL') . 'plans', 'label' => 'Existing Plans'],
-			['url' => Config::get('URL') . 'pantry', 'label' => 'Pantry']
+			['url' => Config::get('URL') . 'preferences', 'label' => 'Preferences', 'active' => 'preferences'],
+			['url' => Config::get('URL') . 'favorites', 'label' => 'Favorites', 'active' => 'favorites'],
+			['url' => Config::get('URL') . 'planner', 'label' => 'Make a Plan', 'active' => 'planner'],
+			['url' => Config::get('URL') . 'plans', 'label' => 'Existing Plans', 'active' => 'plans'],
+			['url' => Config::get('URL') . 'pantry', 'label' => 'Pantry', 'active' => 'pantry']
 			)
 			
 		));

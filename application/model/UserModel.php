@@ -46,6 +46,7 @@ class UserModel
         return $all_users_profiles;
     }
 
+	// Get the types of accounts that exist in database
 	public static function getAllAccountTypes()
     {
         $database = DatabaseFactory::getFactory()->getConnection();
