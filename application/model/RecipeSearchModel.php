@@ -13,13 +13,12 @@ class RecipeSearchModel
     public static function getSearchTerms(string $term, string $tableName): array
     {
         $database = DatabaseFactory::getFactory()->getConnection();
-        $sql = "SELECT id, name, type FROM :tableName WHERE type = :term ";
+        $sql = "SELECT id, name, type FROM " . $tableName . " WHERE type ='" . $term . "'";
 
         $query = $database->prepare($sql);
-        $query->execute(array(":tableName" => $tableName, ":term" => $term));
+        $query->execute(array());
 
         return $query->fetchAll();
-
     }
 
 }
