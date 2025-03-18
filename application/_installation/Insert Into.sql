@@ -1,25 +1,25 @@
 INSERT INTO account_types (id, name)
 VALUES (1, 'Guest'),
        (2, 'Normal User'),
-       (3, ''),
-       (4, ''),
-       (5, ''),
-       (6, ''),
-       (7, 'Admin');
+       (7, 'Admin')
+	   ON DUPLICATE KEY UPDATE
+	  	name = VALUES(name);
 
 INSERT INTO preferences (name, type)
-VALUES ('Dairy', 'allergen'),
-       ('Eggs', 'allergen'),
-       ('Gluten', 'allergen'),
-       ('Grain', 'allergen'),
-       ('Peanuts', 'allergen'),
-       ('Seafood', 'allergen'),
-       ('Sesame', 'allergen'),
-       ('Shellfish', 'allergen'),
-       ('Soy', 'allergen'),
-       ('Sulfite', 'allergen'),
-       ('Tree Nut', 'allergen'),
-       ('Wheat', 'allergen');
+VALUES ('Dairy', 'intolerances'),
+       ('Eggs', 'intolerances'),
+       ('Gluten', 'intolerances'),
+       ('Grain', 'intolerances'),
+       ('Peanuts', 'intolerances'),
+       ('Seafood', 'intolerances'),
+       ('Sesame', 'intolerances'),
+       ('Shellfish', 'intolerances'),
+       ('Soy', 'intolerances'),
+       ('Sulfite', 'intolerances'),
+       ('Tree Nut', 'intolerances'),
+       ('Wheat', 'intolerances')
+	   ON DUPLICATE KEY UPDATE
+	  	type = VALUES(type);
 
 INSERT INTO preferences (name, type)
 VALUES ('Gluten Free', 'diet'),
@@ -32,7 +32,9 @@ VALUES ('Gluten Free', 'diet'),
        ('Paleo', 'diet'),
        ('Primal', 'diet'),
        ('Low FODMAP', 'diet'),
-       ('Whole30', 'diet');
+       ('Whole30', 'diet')
+	   ON DUPLICATE KEY UPDATE
+	  	type = VALUES(type);
 
 INSERT INTO searchTerms (name, type)
 VALUES ('main course', 'type'),
@@ -48,7 +50,9 @@ VALUES ('main course', 'type'),
        ('marinade', 'type'),
        ('fingerfood', 'type'),
        ('snack', 'type'),
-       ('drink', 'type');
+       ('drink', 'type')
+	   ON DUPLICATE KEY UPDATE
+	  	type = VALUES(type);
 
 INSERT INTO searchTerms (name, type)
 VALUES ('African', 'cuisine'),
@@ -77,6 +81,7 @@ VALUES ('African', 'cuisine'),
        ('Southern', 'cuisine'),
        ('Spanish', 'cuisine'),
        ('Thai', 'cuisine'),
+<<<<<<< Updated upstream
        ('Vietnamese', 'cuisine');
 
 INSERT INTO searchTerms (name, type)
@@ -132,4 +137,9 @@ VALUES ('meta-score', NULL),
        ('vitamin-e', NULL),
        ('vitamin-k', NULL),
        ('sugar', NULL),
-       ('zinc', NULL);
+       ('zinc', NULL);       ('zinc', NULL);       ('zinc', NULL);
+=======
+       ('Vietnamese', 'cuisine')
+	   ON DUPLICATE KEY UPDATE
+	  	type = VALUES(type);
+>>>>>>> Stashed changes
