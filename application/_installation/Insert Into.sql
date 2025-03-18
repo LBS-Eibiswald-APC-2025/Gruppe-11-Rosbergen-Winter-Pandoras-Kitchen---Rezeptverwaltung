@@ -82,6 +82,7 @@ VALUES ('African', 'cuisine'),
        ('Spanish', 'cuisine'),
        ('Thai', 'cuisine'),
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
        ('Vietnamese', 'cuisine');
 
 INSERT INTO searchTerms (name, type)
@@ -138,6 +139,11 @@ VALUES ('meta-score', NULL),
        ('vitamin-k', NULL),
        ('sugar', NULL),
        ('zinc', NULL);       ('zinc', NULL);       ('zinc', NULL);
+=======
+       ('Vietnamese', 'cuisine')
+	   ON DUPLICATE KEY UPDATE
+	  	type = VALUES(type);
+>>>>>>> Stashed changes
 =======
        ('Vietnamese', 'cuisine')
 	   ON DUPLICATE KEY UPDATE

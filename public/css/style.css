@@ -945,6 +945,7 @@ input[type="number"] {
 }
 
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 
 /* ================================ Search Results/Recipes =================================== */
 .recipe-results {
@@ -1053,6 +1054,8 @@ input[type="number"] {
 .nutrition-info td:first-child {
     font-weight: bold;
 =======
+=======
+>>>>>>> Stashed changes
 /* ========================= User Input  ============================ */
 .user-options-container {
 	display: flex;
@@ -1134,5 +1137,8 @@ input[type="number"] {
 @keyframes spin {
 	0% { transform: rotate(0deg); }
 	100% { transform: rotate(360deg); }
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
 }

@@ -18,7 +18,10 @@ class RecipeSearchController extends Controller
             'diet' => RecipeSearchModel::getSearchTerms('diet', "preferences"),
             'intolerances' => RecipeSearchModel::getSearchTerms('intolerances', "preferences"),
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
             'time' => RecipeSearchModel::getSearchTerms('time', "preferences"),
+=======
+>>>>>>> Stashed changes
 =======
 >>>>>>> Stashed changes
         ));
