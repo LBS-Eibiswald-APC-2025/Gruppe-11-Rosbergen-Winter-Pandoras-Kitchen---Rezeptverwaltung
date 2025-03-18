@@ -16,13 +16,13 @@ class RecipeSearchController extends Controller
             'types' => RecipeSearchModel::getSearchTerms('type', "searchterms"),
             'cuisine' => RecipeSearchModel::getSearchTerms('cuisine', "searchterms"),
             'diet' => RecipeSearchModel::getSearchTerms('diet', "preferences"),
-            'allergen' => RecipeSearchModel::getSearchTerms('allergen', "preferences"),
+            'intolerances' => RecipeSearchModel::getSearchTerms('intolerances', "preferences"),
+            'time' => RecipeSearchModel::getSearchTerms('time', "preferences"),
         ));
     }
 
-    public function advancedSearch()
+    public function recipedetail()
     {
-        $this->View->render('recipesearch/advancedSearch');
+        $this->View->render('recipesearch/recipedetail', array());
     }
-
 }

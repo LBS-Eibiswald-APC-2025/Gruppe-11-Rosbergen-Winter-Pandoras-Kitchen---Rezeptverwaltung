@@ -6,6 +6,10 @@
     <meta charset="utf-8">
     <!-- send empty favicon fallback to prevent user's browser hitting the server for lots of favicon requests resulting in 404s -->
     <link rel="icon" href="data:;base64,=">
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="<?= Config::get('URL'); ?>images/Favicon2.png">
+
+
     <!-- CSS -->
     <link rel="stylesheet" href="<?php echo Config::get('URL'); ?>css/style.css"/>
     <link rel="stylesheet" href="<?php echo Config::get('URL'); ?>css/normalize.css"/>

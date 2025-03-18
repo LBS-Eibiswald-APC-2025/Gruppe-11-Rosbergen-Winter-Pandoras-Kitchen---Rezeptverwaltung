@@ -20,4 +20,5 @@ class RecipeSearchModel
 
         return $query->fetchAll();
     }
+
 }
