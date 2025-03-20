@@ -70,6 +70,6 @@ Datum|AP NR|Zeitraum|Aufwand|Ort|Tätigkeit|Probleme|Quellen
 11.03.2025| 1.3.2 | 10:00-12:20 | 2h20min | LBS | User und Zutaten View angepasst |  | []()
 13.03.2025| 1.2.5 | 09:25-11:25 | 2h00min | LBS | Inhaltsverzeichniserstellt, Seitenanzahl, Autor Kürzel |  | []()
 14.03.2025| 1.3.2, 1.3.3 | 07:45-10:15 | 2h30min | LBS | Zutatensuche gemacht |  | []()
-18.03.2025| X.X.X | 10:00-12:20 | 2h20min | LBS | Pantry umbauen, jetzt mit SQL verbunden |  | []()
-20.03.2025| X.X.X | 09:25-12:50 | 3h25min | LBS | Pantry umbauen, jetzt mit SQL verbunden, Planer einbauen |  | []()
+18.03.2025| 1.3.2, 1.3.3 | 10:00-12:20 | 2h20min | LBS | Pantry umbauen, jetzt mit SQL verbunden |  | []()
+20.03.2025| 1.3.3, 1.8.2 | 09:25-12:50 | 3h25min | LBS | Planer einbauen, Dokumentation |  | []()
 XX.XX.XXXX| X.X.X.X. | XX:XX-XX:XX | XhXXmin | LBS | XXX | mir fällt nichts ein | []()
