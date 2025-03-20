@@ -35,6 +35,7 @@ Datum|AP NR|Zeitraum|Aufwand|Ort|Tätigkeit|Probleme|Quellen
 13.03.2025| 1.3.2, 1.3.3 | 11:25-12:50 | 1h25min | LBS | recipesearch Formular erstellt, SQL inserts für diverse terms, Such / Filterfunktionen, erweitern |  | []()
 14.03.2025| 1.3.2, 1.3.3 | 07:45-10:15 | 2h30min | LBS | recipesearch Formular erweitert, Such / Filterfunktionen, erweitern |  | []()
 18.03.2025| 1.3.2, 1.3.3 | 10:00-12:20 | 2h20min | LBS | Such / Filterfunktionen, erweitern, Search Results erstellt, recipedetail.php erstellt |  | []()
+20.03.2025| X.X.X | 09:25-12:50 | 3h25min | LBS | XXX |  | []()
 XX.XX.XXXX| X.X.X.X. | XX:XX-XX:XX | XhXXmin | LBS | XXX | mir fällt nichts ein | []()
 
 
@@ -69,5 +70,6 @@ Datum|AP NR|Zeitraum|Aufwand|Ort|Tätigkeit|Probleme|Quellen
 11.03.2025| 1.3.2 | 10:00-12:20 | 2h20min | LBS | User und Zutaten View angepasst |  | []()
 13.03.2025| 1.2.5 | 09:25-11:25 | 2h00min | LBS | Inhaltsverzeichniserstellt, Seitenanzahl, Autor Kürzel |  | []()
 14.03.2025| 1.3.2, 1.3.3 | 07:45-10:15 | 2h30min | LBS | Zutatensuche gemacht |  | []()
-18.03.2025| X.X.X | 10:00-12:20 | 2h20min | LBS |  XXXXXXXXXXXXXXXXXXXXXX            |  | []()
+18.03.2025| X.X.X | 10:00-12:20 | 2h20min | LBS | Pantry umbauen, jetzt mit SQL verbunden |  | []()
+20.03.2025| X.X.X | 09:25-12:50 | 3h25min | LBS | Pantry umbauen, jetzt mit SQL verbunden, Planer einbauen |  | []()
 XX.XX.XXXX| X.X.X.X. | XX:XX-XX:XX | XhXXmin | LBS | XXX | mir fällt nichts ein | []()
