@@ -7,36 +7,34 @@
 
         <section class="story">
             <h2>The Story of Pandora's Kitchen</h2>
-            <p>"What should I cook today?" That simple yet frustrating question sparked the idea behind Pandora’s
-                Kitchen.</p>
-            <p>Too often, we stood in front of the fridge with ingredients but no inspiration. Or we wanted to eat
-                healthier, but meal planning felt overwhelming. We knew there had to be a better way.</p>
-            <p>Pandora's Kitchen was born to make cooking stress-free, creative, and smart. Instead of spending hours
-                searching for recipes or wasting food, we built a solution that intelligently suggests recipes,
-                considers
-                dietary preferences, and even creates shopping lists automatically.</p>
+            <p>"What should I cook today?" That simple yet frustrating question sparked the idea behind Pandora's Kitchen.</p>
+            <p>Too often, we find ourselves standing in front of a fridge full of food, but no idea what to cook with it!
+				We also want to eat healthier, and keep out meals organized, but meal planning felt overwhelming. 
+				We knew there had to be a better way.</p>
+            <p>Pandora's Kitchen was born to make looking for recipes easy and stress-free. Instead of spending hours
+                searching for what to cook or wasting food, we built a solution that intelligently suggests recipes, considers
+                dietary preferences, and even lets you create meal plans.</p>
 
-            <h3>The Minds Behind Pandora’s Kitchen</h3>
+            <h3>The Minds Behind Pandora's Kitchen</h3>
             <p>We are a team of tech enthusiasts and food lovers with one shared vision: to make meal planning smarter,
                 reduce food waste, and bring back the joy of cooking. With experience in web development and a passion
-                for
-                intuitive apps, we’ve created a platform that adapts to your needs – not the other way around.</p>
-            <p>Whether you’re vegan, have food allergies, or just need inspiration, Pandora’s Kitchen helps you make the
-                most of your ingredients.</p>
+                for intuitive apps, we've created a platform that adapts to your needs - not the other way around.</p>
+            <p>Whether you're following a strict diet like veganism, have food allergies, or just need inspiration, 
+				Pandora's Kitchen helps you make the most of your ingredients.</p>
 
-            <p>Give it a try – your next meal is just a click away! 🍽️✨</p>
+            <p>Give it a try - your next meal is just a few clicks away! 🍽️✨</p>
 
             <h3>Meet the Team</h3>
             <div class="team">
                 <div class="team-member">
                     <img src="<?= Config::get('URL'); ?>/images/woman-1353211_1280.png" alt="">
-                    <p class="name">Alice Johnson</p>
-                    <p class="role">Founder & CEO</p>
+                    <p class="name">Angela Rosbergen</p>
+                    <p class="role">Founder</p>
                 </div>
                 <div class="team-member">
                     <img src="<?= Config::get('URL'); ?>/images/man-2700445_1280.png" alt="">
-                    <p class="name">Bob Smith</p>
-                    <p class="role">Lead Developer</p>
+                    <p class="name">Alwin Winter</p>
+                    <p class="role">Founder</p>
                 </div>
             </div>
         </section>
@@ -45,12 +43,13 @@
 
         <section class="how-it-works">
             <h2>How It Works</h2>
-            <p>Discover how Pandora's Kitchen simplifies your meal planning process with just a few easy steps:</p>
+            <p>You can always try our Recipe Search while logged out, but we suggest you create an account to get the most out of this app!</p>
+			<p>Once you've set up your account, Pandora's Kitchen will be able to help simplify your meal planning process with just a few easy steps:</p>
             <div class="steps">
                 <div class="step" >
                     <img src="<?= Config::get('URL'); ?>/images/illustration-des-persoenlichen-einstellungskonzepts_114360-2251.jpg" alt="Step 1" class="step-icon">
                     <h3>Choose Your Preferences</h3>
-                    <p>Select your dietary preferences, restrictions, and goals.</p>
+                    <p>Select your dietary preferences, dietary restrictions, and goals.</p>
                 </div>
                 <div class="step" >
                     <img src="<?= Config::get('URL'); ?>/images/rezeptbuchkonzeptillustration_114360-7481.jpg" alt="Step 2" class="step-icon">
@@ -59,8 +58,8 @@
                 </div>
                 <div class="step" >
                     <img src="<?= Config::get('URL'); ?>/images/abbildung-des-essenskonzepts-bestellen_114360-7070.png" alt="Step 3" class="step-icon">
-                    <h3>Plan & Shop</h3>
-                    <p>Plan your meals and generate shopping lists automatically.</p>
+                    <h3>Plan your meals</h3>
+                    <p>Create plans and know what you will be cooking several days in advance.</p>
                 </div>
             </div>
         </section>

@@ -11,8 +11,9 @@ class PlannerController extends Controller
 		Auth::checkAuthentication();
     }
 
-    public function index()
+    public function index($test = false)
     {
-        $this->View->renderWithoutHeaderAndFooter('planner/index');
+		$this->View->renderWithoutHeaderAndFooter('planner/index');
+
     }
 }

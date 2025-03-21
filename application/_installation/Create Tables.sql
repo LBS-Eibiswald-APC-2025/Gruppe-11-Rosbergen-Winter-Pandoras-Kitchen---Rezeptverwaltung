@@ -28,9 +28,7 @@ CREATE TABLE IF NOT EXISTS pantry
 (
     id INT AUTO_INCREMENT PRIMARY KEY,
     ingredientName VARCHAR(255) NOT NULL,
-	ingredientOriginal VARCHAR(255) NOT NULL,
-	ingredientOriginalName VARCHAR(255) NOT NULL,
-    type VARCHAR(50) NOT NULL
+	image VARCHAR(255)
 );
 
 

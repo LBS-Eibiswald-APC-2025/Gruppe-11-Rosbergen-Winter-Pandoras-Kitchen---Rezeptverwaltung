@@ -34,7 +34,7 @@
 			echo "<ul>";
 			foreach ($ingredients as $ingredient) {
 				// Convert only the first letter to uppercase and keep the rest the same
-				$ingredientName = ucfirst(strtolower(htmlspecialchars($ingredient['ingredientName'])));
+				$ingredientName = ucfirst(strtolower(htmlspecialchars($ingredient['name'])));
 
 				echo "<li>" . $ingredientName . " 
 					<a href='" . Config::get('URL') . "pantry/deleteItem?item_id=" . htmlspecialchars($ingredient['id']) . "' 
@@ -51,7 +51,7 @@
     <!-- Search box -->
 	<form action="<?= Config::get('URL'); ?>pantry/addItem" method="post">
 		<input type="text" name="ingredient_name" placeholder="Add ingredients" value="<?= isset($_GET['search']) ? htmlspecialchars($_GET['search']) : ''; ?>">
-		<button type="submit">Add</button>
+		<button class="roundbutton" type="submit">Add</button>
 	</form>
 	<p><small>*Note that ingredients such as salt and water are always considered to be in stock in your pantry</small></p> <!-- // !! TODO Make sure this is true -->
     </div>

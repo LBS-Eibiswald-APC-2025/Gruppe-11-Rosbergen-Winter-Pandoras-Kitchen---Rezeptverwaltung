@@ -21,7 +21,6 @@ class RegistrationModel
         $user_email_repeat = strip_tags(Request::post('user_email_repeat'));
         $user_password_new = Request::post('user_password_new');
         $user_password_repeat = Request::post('user_password_repeat');
-		$user_account_type = strip_tags(Request::post('user_account_type'));
 
 
         // stop registration flow if registrationInputValidation() returns false (= anything breaks the input check rules)
@@ -56,7 +55,7 @@ class RegistrationModel
         $user_activation_hash = bin2hex(random_bytes(40));
 
         // write user data to database
-        if (!self::writeNewUserToDatabase($user_name, $user_password_hash, $user_email, time(), $user_activation_hash, $user_account_type)) {
+        if (!self::writeNewUserToDatabase($user_name, $user_password_hash, $user_email, time(), $user_activation_hash)) {
             Session::add('feedback_negative', Text::get('FEEDBACK_ACCOUNT_CREATION_FAILED'));
             return false; // no reason not to return false here
         }
@@ -195,29 +194,33 @@ class RegistrationModel
      *
      * @return bool
      */
-    public static function writeNewUserToDatabase($user_name, $user_password_hash, $user_email, $user_creation_timestamp, $user_activation_hash, $user_account_type)
-    {
-        $database = DatabaseFactory::getFactory()->getConnection();
+	public static function writeNewUserToDatabase($user_name, $user_password_hash, $user_email, $user_creation_timestamp, $user_activation_hash)
+	{
+		$database = DatabaseFactory::getFactory()->getConnection();
 
-        // write new users data into database
-        $sql = "INSERT INTO users (user_name, user_password_hash, user_email, user_creation_timestamp, user_activation_hash, user_provider_type, user_account_type)
-                    VALUES (:user_name, :user_password_hash, :user_email, :user_creation_timestamp, :user_activation_hash, :user_provider_type, :user_account_type)";
-        $query = $database->prepare($sql);
-        $query->execute(array(':user_name' => $user_name,
-                              ':user_password_hash' => $user_password_hash,
-                              ':user_email' => $user_email,
-                              ':user_creation_timestamp' => $user_creation_timestamp,
-                              ':user_activation_hash' => $user_activation_hash,
-                              ':user_provider_type' => 'DEFAULT',
-							  ':user_account_type' => $user_account_type
-						));
-        $count =  $query->rowCount();
-        if ($count == 1) {
-            return true;
-        }
+		// write new users data into database
+		$sql = "INSERT INTO users (user_name, user_password_hash, user_email, user_creation_timestamp, user_activation_hash, user_provider_type, user_account_type)
+					VALUES (:user_name, :user_password_hash, :user_email, :user_creation_timestamp, :user_activation_hash, :user_provider_type, :user_account_type)";
+		
+		$query = $database->prepare($sql);
+		$query->execute([
+			':user_name' => $user_name,
+			':user_password_hash' => $user_password_hash,
+			':user_email' => $user_email,
+			':user_creation_timestamp' => $user_creation_timestamp,
+			':user_activation_hash' => $user_activation_hash,
+			':user_provider_type' => 'DEFAULT',
+			':user_account_type' => 2
+		]);
 
-        return false;
-    }
+		$count = $query->rowCount();
+		if ($count == 1) {
+			return true;
+		}
+
+		return false;
+	}
+
 
     /**
      * Deletes the user from users table. Currently used to rollback a registration when verification mail sending

@@ -16,15 +16,6 @@
             <input type="password" name="user_password_new" pattern=".{6,}" placeholder="Password (6+ characters)" required autocomplete="off" />
             <input type="password" name="user_password_repeat" pattern=".{6,}" required placeholder="Repeat your password" autocomplete="off" />
 
-            <select name="user_account_type" id="user_account_type" required style="display: block; width: 100%; padding: 0.5em;">
-                <?php 
-                $accountTypes = UserModel::getAllAccountTypes(); // Fetch account types from the database
-                foreach ($accountTypes as $accountType) { ?>
-                    <option value="<?= $accountType->type_id; ?>">
-                        <?= $accountType->type_name; ?>
-                    </option>
-                <?php } ?>
-            </select>
             
 
             <input type="submit" value="Register" />

@@ -2,6 +2,7 @@
 
 class PantryController extends Controller
 {
+	// !! TODO add WHIZ
     /**
      * Construct this object by extending the basic Controller class
      */
@@ -33,10 +34,9 @@ class PantryController extends Controller
 		// Extract the ID from the first result in the response. Use null coalescing to avoid errors if no results are found.
 		$ingredientID = $data['results'][0]['id'] ?? null; 
 		$ingredientName = $data['results'][0]['name'] ?? null; 
-		$ingredientOriginal = $data['results'][0]['original'] ?? null; 
-		$ingredientOriginalName = $data['results'][0]['originalName'] ?? null; 
+		$image = $data['results'][0]['image'] ?? null; 
 
-		PantryModel::addPantryItem($ingredientID, $ingredientName, $ingredientOriginal, $ingredientOriginalName);
+		PantryModel::addPantryItem($ingredientID, $ingredientName, $image);
 		Redirect::to('user/index?active=pantry');
     }
 

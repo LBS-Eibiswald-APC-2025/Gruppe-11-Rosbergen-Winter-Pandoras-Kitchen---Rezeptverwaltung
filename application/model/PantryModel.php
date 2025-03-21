@@ -26,17 +26,16 @@ class PantryModel
      * Add a new pantry item for the user
      * @param string $pantryItem ID
      */
-	public static function addPantryItem($pantryItem, $ingredientName, $ingredientOriginal, $ingredientOriginalName)
+	public static function addPantryItem($pantryItem, $ingredientName, $image)
 	{
 		$database = DatabaseFactory::getFactory()->getConnection();
 	
 		// First, insert the item into the pantry if it does not already exist
-		$sql = "INSERT INTO pantry (item_id, ingredientName, ingredientOriginal, ingredientOriginalName)
-				SELECT :item_id, :ingredientName, :ingredientOriginal, :ingredientOriginalName
-				WHERE NOT EXISTS (SELECT 1 FROM pantry WHERE item_id = :item_id)";
+		$sql = "INSERT INTO pantry (id, ingredientName, image)
+				SELECT :id, :ingredientName, :image
+				WHERE NOT EXISTS (SELECT 1 FROM pantry WHERE id = :id)";
 		$query = $database->prepare($sql);
-		$query->execute(array(':item_id' => $pantryItem, ':ingredientName' => $ingredientName, 
-			':ingredientOriginal' => $ingredientOriginal, ':ingredientOriginalName' => $ingredientOriginalName));
+		$query->execute(array(':id' => $pantryItem, ':ingredientName' => $ingredientName, 'image' => $image));
 	
 		// Now insert the item into the user_pantry (this will only insert if the item is not already linked to the user)
 		$sqlUserPantry = "INSERT IGNORE INTO user_pantry (user_id, item_id) 

@@ -1081,6 +1081,9 @@ input[type="number"] {
 	text-align: center;
 	margin-bottom: 10px;
 }
+.menu-link {
+    color: #333;
+}
 .nav-user {
 	list-style: none;
 	padding: 0;
@@ -1134,3 +1137,15 @@ input[type="number"] {
 	0% { transform: rotate(0deg); }
 	100% { transform: rotate(360deg); }
 }
+.roundbutton {
+	border-radius: revert-layer;
+	margin: 10px 0px;
+}
+.preferences-container {
+	display: flex;
+	justify-content: space-between;
+}
+.preferences-column {
+	width: 48%;
+}
+		

@@ -22,11 +22,7 @@ class RegisterController extends Controller
      */
     public function index()
     {
-        if (LoginModel::isUserLoggedIn()) {
-            $this->View->render('register/index');
-        } else {
-            Redirect::home();
-        }
+        $this->View->render('register/index');
     }
 
     /**
