@@ -12,11 +12,18 @@ if (isset($_GET["advanced_search_trigger"])) {
                        <div class="">
                        <form name="advancedSearchForm" action="" method="get">';
 
+
+    $additionalHtml .= '<div class="">Text Search</div>
+                        <div class="select filters flex_wrapper">
+                            <label><input type="text" name="query" placeholder="Pasta Bolognese"></label>
+                    </div>';
+
+
     /* Menu Type Field*/
     $additionalHtml .= '
     <div class="">Select Menu Type</div>
     <div class="select">
-        <div class="select-box" onclick="toggleDropdown(event)">No selection</div>
+        <div class="select-box filters" onclick="toggleDropdown(event)">No selection</div>
         <div class="dropdown-list">';
 
     foreach ($this->types as $typeItems) {
@@ -46,8 +53,31 @@ if (isset($_GET["advanced_search_trigger"])) {
         <div class="dropdown-list">';
 
     foreach ($this->diet as $dietItems) {
+        $status = "";
+        if ($dietItems->checked == true) {
+            $status = "checked";
+        }
         $additionalHtml .= '<label><input name="diet[]" class="checkbox-hidden" type="checkbox" value="' . $dietItems->name
-            . '" onchange="updateSelection(event)">' . $dietItems->name . '</label>';
+            . '" onchange="updateSelection(event)" ' . $status . '>' . $dietItems->name . '</label>';
+    }
+    $additionalHtml .= '</div>' . '</div>';
+
+
+
+    /* Intolerances */
+    $additionalHtml .= '
+    <div class="">Select Intolerances</div>
+    <div class="select">
+        <div class="select-box" onclick="toggleDropdown(event)">No selection</div>
+        <div class="dropdown-list">';
+
+    foreach ($this->intolerances as $intolerancesItems) {
+        $status = "";
+        if ($intolerancesItems->checked == true) {
+            $status = "checked";
+        }
+        $additionalHtml .= '<label><input name="intolerances[]" class="checkbox-hidden" type="checkbox" value="' . $intolerancesItems->name
+            . '" onchange="updateSelection(event)" ' . $status . '>' . $intolerancesItems->name . '</label>';
     }
     $additionalHtml .= '</div>' . '</div>';
 
@@ -58,19 +88,6 @@ if (isset($_GET["advanced_search_trigger"])) {
         <div class="select">
             <div class="select filters"><input type="number" name="cholesterol" placeholder="Time (max)"></div>
     </div>';
-
-    /* Intolerances */
-    $additionalHtml .= '
-    <div class="">Select Intolerances</div>
-    <div class="select">
-        <div class="select-box" onclick="toggleDropdown(event)">No selection</div>
-        <div class="dropdown-list">';
-
-    foreach ($this->intolerances as $intolerancesItems) {
-        $additionalHtml .= '<label><input name="intolerances[]" class="checkbox-hidden" type="checkbox" value="' . $intolerancesItems->name
-            . '" onchange="updateSelection(event)">' . $intolerancesItems->name . '</label>';
-    }
-    $additionalHtml .= '</div>' . '</div>';
 
     $additionalHtml .= '  
     <!-- Calories (max) -->

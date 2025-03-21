@@ -47,6 +47,18 @@ document.addEventListener("click", function (event) {
 });
 
 
+document.addEventListener("DOMContentLoaded", function () {
+    document.querySelectorAll(".select").forEach(select => {
+        let selected = [];
+
+        select.querySelectorAll(".dropdown-list input:checked").forEach(checkbox => {
+            selected.push(checkbox.value);
+        });
+
+        renderChips(selected, select);
+    });
+});
+
 
 /* Slider input
 document.addEventListener("DOMContentLoaded", function () {

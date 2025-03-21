@@ -5,11 +5,16 @@ include "advancedSearch.php";
 $status = '';
 
 // ToDo
-// Validierung
+
+// Mit JS die erweiterungen von Formular anzeigen und ausblenden
+// Validierung !!!! und XSS Filter aus der Filter.php
+
 // Searchresultate anzeigen
 // Kühlschranksuche
 // Rezeptansicht
 // Printfunktion für rezepte
+
+
 
 // Plan & Shop Einkaufsliste  ???
 

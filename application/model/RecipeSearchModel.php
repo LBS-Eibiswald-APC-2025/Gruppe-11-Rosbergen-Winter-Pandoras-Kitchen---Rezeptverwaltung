@@ -13,12 +13,23 @@ class RecipeSearchModel
     public static function getSearchTerms(string $term, string $tableName): array
     {
         $database = DatabaseFactory::getFactory()->getConnection();
-        $sql = "SELECT id, name, type FROM " . $tableName . " WHERE type ='" . $term . "'";
+        $userId = Session::get('user_id');
 
-        $query = $database->prepare($sql);
-        $query->execute(array());
+        if (Session::userIsLoggedIn() && $tableName == "preferences") {
+            $sql = "SELECT p.id, p.name, p.type, 
+					   IF(up.user_id IS NOT NULL, TRUE, FALSE) AS checked
+				FROM preferences p
+				LEFT JOIN user_preferences up ON p.id = up.preference_id AND up.user_id = :user_id WHERE type ='" . $term . "'";
 
+            $query = $database->prepare($sql);
+            $query->execute(array(":user_id" => $userId));
+        } else {
+
+            $sql = "SELECT id, name, type FROM " . $tableName . " WHERE type ='" . $term . "'";
+
+            $query = $database->prepare($sql);
+            $query->execute(array());
+        }
         return $query->fetchAll();
     }
-
 }
