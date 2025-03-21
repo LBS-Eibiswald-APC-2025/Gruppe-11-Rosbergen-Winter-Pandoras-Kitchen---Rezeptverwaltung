@@ -1148,4 +1148,16 @@ input[type="number"] {
 .preferences-column {
 	width: 48%;
 }
-		
+.gap {
+	gap:7px;
+}	
+.chip-spacer {
+	width: fit-content;
+	margin-bottom: 5px;
+	color: white;
+	text-decoration: none;
+}
+.white-link {
+	color: white;
+	text-decoration: none;
+}

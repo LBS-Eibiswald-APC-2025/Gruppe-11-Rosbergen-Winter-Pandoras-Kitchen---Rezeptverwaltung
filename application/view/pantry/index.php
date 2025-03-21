@@ -31,27 +31,33 @@
 
 		// Show ingredients as a list with a delete link
 		if (!empty($ingredients)) {
-			echo "<ul>";
+			echo "<div class='select'>";
 			foreach ($ingredients as $ingredient) {
+				echo "<div class='chip chip-spacer'>";
 				// Convert only the first letter to uppercase and keep the rest the same
 				$ingredientName = ucfirst(strtolower(htmlspecialchars($ingredient['name'])));
 
-				echo "<li>" . $ingredientName . " 
-					<a href='" . Config::get('URL') . "pantry/deleteItem?item_id=" . htmlspecialchars($ingredient['id']) . "' 
-					style='text-decoration: underline; color: blue; cursor: pointer;'><small>Remove</small></a></li>";
+				echo "<span class='remove'>" . $ingredientName . " 
+					<a class='white-link' href='" . Config::get('URL') . "pantry/deleteItem?item_id=" . htmlspecialchars($ingredient['id']) . "' ><i class='fa fa-times' aria-hidden='true'></i>
+</i></a></span>";
+					echo "</div>";
 			}
-			echo "</ul>";
+			echo "</div>";
 		} else {
 			echo "<p>No ingredients added yet.</p>";
 		}
+
+		
 
         ?>
 
 		
     <!-- Search box -->
-	<form action="<?= Config::get('URL'); ?>pantry/addItem" method="post">
-		<input type="text" name="ingredient_name" placeholder="Add ingredients" value="<?= isset($_GET['search']) ? htmlspecialchars($_GET['search']) : ''; ?>">
-		<button class="roundbutton" type="submit">Add</button>
+	<form class="container" action="<?= Config::get('URL'); ?>pantry/addItem" method="post">
+		<div class="select filters flex_wrapper gap">
+			<input class="" type="text" name="ingredient_name" placeholder="Add ingredients" value="<?= isset($_GET['search']) ? htmlspecialchars($_GET['search']) : ''; ?>">
+			<button class="submit-button" type="submit">Add</button>
+		</div>
 	</form>
 	<p><small>*Note that ingredients such as salt and water are always considered to be in stock in your pantry</small></p> <!-- // !! TODO Make sure this is true -->
     </div>
