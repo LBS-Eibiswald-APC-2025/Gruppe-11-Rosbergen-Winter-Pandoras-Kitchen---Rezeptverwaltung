@@ -23,7 +23,7 @@ if (isset($_GET["advanced_search_trigger"])) {
     $additionalHtml .= '
     <div class="">Select Menu Type</div>
     <div class="select">
-        <div class="select-box filters" onclick="toggleDropdown(event)">No selection</div>
+        <div class="select-box" onclick="toggleDropdown(event)">No selection</div>
         <div class="dropdown-list">';
 
     foreach ($this->types as $typeItems) {
