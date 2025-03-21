@@ -45,7 +45,6 @@ class PantryController extends Controller
      */
     public function deleteItem()
     {
-		// !! TODO Replace GETs with POSTs
 		$itemId = $_GET['item_id'];
 		PantryModel::deletePantryItem($itemId); // Pass the item ID to the model
 		Redirect::to('user/index?active=pantry');

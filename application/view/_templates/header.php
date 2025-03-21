@@ -64,6 +64,13 @@
                     </li>
 
                     <?php if (Session::userIsLoggedIn()) { ?>
+						<li <?php if (View::checkForActiveController($filename, "recipesearch")) {
+							echo ' class="active" ';
+						} ?> >
+							<a href="<?php echo Config::get('URL'); ?>whiz/index">WHIZ</a>
+						</li>
+
+
                         <!-- Show Register button only for admin users -->
                         <?php if (Session::userIsAdmin()) { ?>
                             <li <?php if (View::checkForActiveControllerAndAction($filename, "register/index")) {
@@ -72,6 +79,8 @@
                                 <a href="<?php echo Config::get('URL'); ?>register/index">Register</a>
                             </li>
                         <?php } ?>
+					
+
                     <?php } else { ?>
                         <!-- for not logged in users -->
                         <li <?php if (View::checkForActiveControllerAndAction($filename, "register/index")) {

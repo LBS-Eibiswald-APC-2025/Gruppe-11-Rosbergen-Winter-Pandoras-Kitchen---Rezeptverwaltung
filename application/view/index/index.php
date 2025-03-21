@@ -3,7 +3,7 @@
         <!-- echo out the system feedback (error and success messages) -->
         <?php $this->renderFeedbackMessages(); ?>
         <section class="story">
-            <h2>Welcome to  Pandora's Kitchen!</h2>
+            <h2>Welcome to Pandora's Kitchen!</h2>
             <p>
                 Thank you for choosing Pandora's Kitchen! 
 				This Web-App will allow you to search for your favorite recipes, filtered by your preferences.

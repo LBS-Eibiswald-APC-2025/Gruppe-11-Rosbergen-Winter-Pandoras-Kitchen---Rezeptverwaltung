@@ -14,7 +14,7 @@ if (isset($_GET["advanced_search_trigger"])) {
 
 
     $additionalHtml .= '<div class="">Text Search</div>
-                        <div class="select filters flex_wrapper">
+                        <div class="filters flex_wrapper">
                             <label><input type="text" name="query" placeholder="Pasta Bolognese"></label>
                     </div>';
 
