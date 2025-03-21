@@ -852,8 +852,8 @@ select {
 }
 
 .select .select-box {
-    border: 1px solid #ccc;
-    padding: 8px;
+    border: 1px solid #ddd;
+    padding: 10px;
     border-radius: 5px;
     cursor: pointer;
     background: #fff;
