@@ -21,8 +21,14 @@ class RecipeSearchController extends Controller
         ));
     }
 
-    public function recipedetail()
+    public function recipeDetail()
     {
-        $this->View->render('recipesearch/recipedetail', array());
+        $this->View->render('recipesearch/recipeDetail', array());
+    }
+
+
+    public function searchResults()
+    {
+        $this->View->render('recipesearch/searchResults', array());
     }
 }

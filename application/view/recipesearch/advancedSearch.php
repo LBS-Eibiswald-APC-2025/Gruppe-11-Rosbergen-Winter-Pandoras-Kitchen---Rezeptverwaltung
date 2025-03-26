@@ -1,23 +1,17 @@
 <?php
 
-
-function pre($msg)
-{
-    echo "<pre>" . print_r($msg, true) . "</pre>";
-}
-
 /** Advanced Search From */
-if (isset($_GET["advanced_search_trigger"])) {
-    $additionalHtml = '<h3>Advanced Search</h3><br>
+
+    $additionalHtml = '<div id="extraFields"><h3>Advanced Search</h3><br>
                        <div class="">
                        <form name="advancedSearchForm" action="" method="get">';
 
-
+    /* Text Search Field*/
     $additionalHtml .= '<div class="">Text Search</div>
                         <div class="filters flex_wrapper">
-                            <label><input type="text" name="query" placeholder="Pasta Bolognese"></label>
+                            <label><input  type="text" name="advancedQuery" placeholder="Pasta Bolognese"></label>
+                            <!--<p><span>ERROR</span></p> -->
                     </div>';
-
 
     /* Menu Type Field*/
     $additionalHtml .= '
@@ -30,7 +24,7 @@ if (isset($_GET["advanced_search_trigger"])) {
         $additionalHtml .= '<label><input name="types[]" class="checkbox-hidden" type="checkbox" value="' . $typeItems->name
             . '" onchange="updateSelection(event)">' . $typeItems->name . '</label>';
     }
-    $additionalHtml .= '</div>' . '</div>';
+    $additionalHtml .= '</div></div>';
 
     /* Cuisine Field */
     $additionalHtml .= '
@@ -38,12 +32,11 @@ if (isset($_GET["advanced_search_trigger"])) {
     <div class="select">
         <div class="select-box" onclick="toggleDropdown(event)">No selection</div>
         <div class="dropdown-list">';
-
     foreach ($this->cuisine as $cuisineItems) {
         $additionalHtml .= '<label><input name="cuisine[]" class="checkbox-hidden" type="checkbox" value="' . $cuisineItems->name
             . '" onchange="updateSelection(event)">' . $cuisineItems->name . '</label>';
     }
-    $additionalHtml .= '</div>' . '</div>';
+    $additionalHtml .= '</div></div>';
 
     /* Diäten Field*/
     $additionalHtml .= '
@@ -51,18 +44,17 @@ if (isset($_GET["advanced_search_trigger"])) {
     <div class="select">
         <div class="select-box" onclick="toggleDropdown(event)">No selection</div>
         <div class="dropdown-list">';
-
     foreach ($this->diet as $dietItems) {
         $status = "";
-        if ($dietItems->checked == true) {
-            $status = "checked";
+        if (isset($_SESSION['user_logged_in'])) {
+            if ($dietItems->checked == true) {
+                $status = "checked";
+            }
         }
         $additionalHtml .= '<label><input name="diet[]" class="checkbox-hidden" type="checkbox" value="' . $dietItems->name
             . '" onchange="updateSelection(event)" ' . $status . '>' . $dietItems->name . '</label>';
     }
-    $additionalHtml .= '</div>' . '</div>';
-
-
+    $additionalHtml .= '</div></div>';
 
     /* Intolerances */
     $additionalHtml .= '
@@ -73,20 +65,22 @@ if (isset($_GET["advanced_search_trigger"])) {
 
     foreach ($this->intolerances as $intolerancesItems) {
         $status = "";
-        if ($intolerancesItems->checked == true) {
-            $status = "checked";
+        if (isset($_SESSION['user_logged_in'])) {
+            if ($intolerancesItems->checked == true) {
+                $status = "checked";
+            }
         }
         $additionalHtml .= '<label><input name="intolerances[]" class="checkbox-hidden" type="checkbox" value="' . $intolerancesItems->name
             . '" onchange="updateSelection(event)" ' . $status . '>' . $intolerancesItems->name . '</label>';
     }
-    $additionalHtml .= '</div>' . '</div>';
+    $additionalHtml .= '</div></div>';
 
 
     /* Cooking Time Field*/
     $additionalHtml .= '
     <div class="">Select Time (Minutes)</div>
         <div class="select">
-            <div class="select filters"><input type="number" name="cholesterol" placeholder="Time (max)"></div>
+            <div class="select filters"><input type="number" name="time" placeholder="Time (max)"></div>
     </div>';
 
     $additionalHtml .= '  
@@ -105,47 +99,10 @@ if (isset($_GET["advanced_search_trigger"])) {
      <!-- Fat content (max) -->
     <div class="">Select Fat content (g)</div>
     <div class="select filters"><input type="number" name="fat" placeholder="Fat content (max)"></div>
-    <button class="submit-button" type="submit" name="advancedSearchBtn">Search
+    <button class="submit-button" type="submit" value="advancedSearchBtn" name="advancedSearchBtn">Search
         <i class="fa fa-search  smallPaddingLeft"></i>
     </button>';
-    $additionalHtml .= '</form>';
-} else {
-    $status = "required";
-    $additionalHtml = '';
-}
-
-
-if (isset($_GET["advancedSearchBtn"])) {
-
-    $spoonacular = Spoonacular::getInstance();
-
-    /**
-     * normales if: if (isset($_GET["fat"])) { $fat = $_GET["fat"] } else { $fat = ""; }
-     * Short hand if: isset($_GET["fat"]) ? $_GET["fat"] : "";
-     * short short hand if: $_GET["fat"] ?? "";
-     */
-    $types = $_GET["types"] ?? "";
-    $cuisine = $_GET["cuisine"] ?? "";
-    $diet = $_GET["diet"] ?? "";
-    $intolerances = $_GET["intolerances"] ?? "";
-    $calories = $_GET["calories"] ?? "";
-    $sugar = $_GET["sugar"] ?? "";
-    $cholesterol = $_GET["cholesterol"] ?? "";
-    $fat = $_GET["fat"] ?? "";
-
-
-    // Validation ??
-
-
-    $test = $spoonacular->complexSearch("", $types, $cuisine, $diet, $intolerances, $calories, $sugar, $cholesterol, $fat);
-    //pre($test);
-
-
-    // Result
-    $searchResults = "";
-
-}
-
+    $additionalHtml .= '</form></div>';
 
 ?>
 

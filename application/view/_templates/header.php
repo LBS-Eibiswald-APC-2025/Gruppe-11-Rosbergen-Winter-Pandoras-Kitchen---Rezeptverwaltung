@@ -64,7 +64,7 @@
                     </li>
 
                     <?php if (Session::userIsLoggedIn()) { ?>
-						<li <?php if (View::checkForActiveController($filename, "recipesearch")) {
+						<li <?php if (View::checkForActiveController($filename, "whiz")) {
 							echo ' class="active" ';
 						} ?> >
 							<a href="<?php echo Config::get('URL'); ?>whiz/index">WHIZ</a>

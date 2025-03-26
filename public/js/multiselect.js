@@ -60,6 +60,21 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 
+function toggleFormular() {
+    var formular = document.getElementById("formular");
+    var button = document.getElementById("toggleExtras");
+
+    // Überprüfen, ob das Formular gerade sichtbar ist
+    if (formular.style.display === "none" || formular.style.display === "") {
+        formular.style.display = "block"; // Formular anzeigen
+        button.innerHTML = 'Hide Advanced Search'; // Button-Text ändern
+    } else {
+        formular.style.display = "none"; // Formular ausblenden
+        button.innerHTML = 'Advanced Search <i class="fa fa-search smallPaddingLeft"></i>'; // Button-Text zurücksetzen
+    }
+}
+
+
 /* Slider input
 document.addEventListener("DOMContentLoaded", function () {
     let slider = document.getElementById("myRange");
