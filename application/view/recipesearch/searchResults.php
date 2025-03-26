@@ -47,8 +47,8 @@ if (isset($_GET["advancedSearchBtn"]) || !empty($_GET['query'])) {
         }
     }
 
-    if (!empty($searchReturn)) {
-        $result = '<br><br>
+    if (!empty($searchReturn['results'])) { 
+        $result = '
         <div class="container">
             <h3>Search Results</h3>
             <div class="box">
@@ -60,7 +60,7 @@ if (isset($_GET["advancedSearchBtn"]) || !empty($_GET['query'])) {
                             <img class="recipe-image" src="' . htmlspecialchars($recipe["image"]) . '"alt="' . htmlspecialchars($recipe["title"]) . '">
                             <div class="recipePadding">
                                 <p class="recipe-title">' . htmlspecialchars($recipe["title"]) . '</p>
-                                <span class="recipe-meta">Ready in ' . htmlspecialchars($recipe["readyInMinutes"]) . 'minutes | Servings: ' . htmlspecialchars($recipe["servings"]) . '</span>
+                                <span class="recipe-meta">Ready in ' . htmlspecialchars($recipe["readyInMinutes"]) . ' minutes | Servings: ' . htmlspecialchars($recipe["servings"]) . '</span>
                                 <a class="recipe-link" href="' . htmlspecialchars($recipe["sourceUrl"]) . '"target="_blank">View Full Recipe</a>
                             </div>
                         </div>';
@@ -71,6 +71,9 @@ if (isset($_GET["advancedSearchBtn"]) || !empty($_GET['query'])) {
             </div>
         </div>';
     }
+	else {
+		$result = "<p>Sorry, we couldn't find any recipes matching your specifications.</p>";
+	}
 }
 
 ?>

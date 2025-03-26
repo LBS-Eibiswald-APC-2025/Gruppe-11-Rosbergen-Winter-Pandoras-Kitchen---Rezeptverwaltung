@@ -1,12 +1,26 @@
 function toggleDropdown(event) {
     let select = event.currentTarget.closest(".select");
     let dropdown = select.querySelector(".dropdown-list");
-    dropdown.classList.toggle("d-block");
+
+	// If the dropdown is already open, we just toggle it (open/close)
+	if (dropdown.classList.contains("d-block")) {
+		dropdown.classList.remove("d-block");
+	} else {
+		// Otherwise, we open this dropdown and close all other dropdowns
+		document.querySelectorAll(".select .dropdown-list").forEach(dropdownItem => {
+			dropdownItem.classList.remove("d-block");
+		});
+		dropdown.classList.add("d-block");
+	}
+
+    // Prevent event from bubbling up to the document click listener
+    event.stopPropagation();
 }
 
 function updateSelection(event) {
     let select = event.currentTarget.closest(".select");
     let selected = [];
+	console.log("asdfasdfasdfasdfasdfasdfasdf");
 
     select.querySelectorAll(".dropdown-list input:checked").forEach(checkbox => {
         selected.push(checkbox.value);
@@ -15,20 +29,38 @@ function updateSelection(event) {
     renderChips(selected, select);
 }
 
+function updateAll() {
+    let allDropdowns = document.querySelectorAll(".select");
+    
+    allDropdowns.forEach(select => {
+        let selectedValues = [];
+
+        select.querySelectorAll(".dropdown-list input:checked").forEach(checkbox => {
+            selectedValues.push(checkbox.value);
+        });
+
+        renderChips(selectedValues, select);
+    });
+}
+
+
 function renderChips(selected, select) {
     let selectBox = select.querySelector(".select-box");
-    selectBox.innerHTML = "";
+	if(selectBox != null) {
 
-    if (selected.length === 0) {
-        selectBox.textContent = "Select allergen";
-    } else {
-        selected.forEach(value => {
-            let chip = document.createElement("div");
-            chip.classList.add("chip");
-            chip.innerHTML = `${value} <span class='remove' onclick='removeChip("${value}", this)'>×</span>`;
-            selectBox.appendChild(chip);
-        });
-    }
+		selectBox.innerHTML = "";
+		
+		if (selected.length === 0) {
+			selectBox.textContent = "No Selection";
+		} else {
+			selected.forEach(value => {
+				let chip = document.createElement("div");
+				chip.classList.add("chip");
+				chip.innerHTML = `${value} <span class='remove' onclick='removeChip("${value}", this)'>×</span>`;
+				selectBox.appendChild(chip);
+			});
+		}
+	}
 }
 
 function removeChip(value, element) {
@@ -38,26 +70,23 @@ function removeChip(value, element) {
     updateSelection({ currentTarget: checkbox });
 }
 
+// Click listener to close any open dropdowns when clicked anywhere on the document
 document.addEventListener("click", function (event) {
-    document.querySelectorAll(".select").forEach(select => {
-        if (!select.contains(event.target)) {
-            select.querySelector(".dropdown-list").classList.remove("d-block");
+    // Close all dropdowns when clicking outside
+    document.querySelectorAll(".select .dropdown-list").forEach(dropdown => {
+        if (!dropdown.contains(event.target)) {
+            dropdown.classList.remove("d-block");
         }
     });
 });
 
-
-document.addEventListener("DOMContentLoaded", function () {
-    document.querySelectorAll(".select").forEach(select => {
-        let selected = [];
-
-        select.querySelectorAll(".dropdown-list input:checked").forEach(checkbox => {
-            selected.push(checkbox.value);
-        });
-
-        renderChips(selected, select);
+// Prevent closing the dropdown when clicking inside the select box
+document.querySelectorAll(".select").forEach(select => {
+    select.addEventListener("click", function (event) {
+        event.stopPropagation(); // Prevent the event from bubbling up to the document listener
     });
 });
+
 
 
 function toggleFormular() {

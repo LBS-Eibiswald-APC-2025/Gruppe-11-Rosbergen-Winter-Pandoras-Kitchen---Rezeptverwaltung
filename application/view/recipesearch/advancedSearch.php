@@ -17,7 +17,7 @@
     $additionalHtml .= '
     <div class="">Select Menu Type</div>
     <div class="select">
-        <div class="select-box" onclick="toggleDropdown(event)">No selection</div>
+        <div class="select-box" onclick="toggleDropdown(event)">No Selection</div>
         <div class="dropdown-list">';
 
     foreach ($this->types as $typeItems) {
@@ -30,7 +30,7 @@
     $additionalHtml .= '
     <div class="">Select Cuisine</div>
     <div class="select">
-        <div class="select-box" onclick="toggleDropdown(event)">No selection</div>
+        <div class="select-box" onclick="toggleDropdown(event)">No Selection</div>
         <div class="dropdown-list">';
     foreach ($this->cuisine as $cuisineItems) {
         $additionalHtml .= '<label><input name="cuisine[]" class="checkbox-hidden" type="checkbox" value="' . $cuisineItems->name
@@ -42,7 +42,7 @@
     $additionalHtml .= '
     <div class="">Select Diet</div>
     <div class="select">
-        <div class="select-box" onclick="toggleDropdown(event)">No selection</div>
+        <div class="select-box" onclick="toggleDropdown(event)">No Selection</div>
         <div class="dropdown-list">';
     foreach ($this->diet as $dietItems) {
         $status = "";
@@ -60,7 +60,7 @@
     $additionalHtml .= '
     <div class="">Select Intolerances</div>
     <div class="select">
-        <div class="select-box" onclick="toggleDropdown(event)">No selection</div>
+        <div class="select-box" onclick="toggleDropdown(event)">No Selection</div>
         <div class="dropdown-list">';
 
     foreach ($this->intolerances as $intolerancesItems) {
@@ -107,15 +107,13 @@
 ?>
 
 
+
 <!--
-
-
-
     /* Speiseart */
     $additionalHtml .= '<div class="">Select menu type</div>
                             <div class="filters">
                             <select name="types">
-                            <option value="">No selection</option>';
+                            <option value="">No Selection</option>';
     foreach ($this->types as $type) {
         $additionalHtml .= '<option value="' . $type->name . '">' . $type->name . '</option>';
     }

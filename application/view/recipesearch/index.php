@@ -65,15 +65,12 @@ $status = '';
             </form>
             <br>
             <button class="submit-button" id="toggleExtras" type="button" name="advanced_search_trigger"
-                    value="Advanced Search" onclick="toggleFormular()">Advanced Search
+                    value="Advanced Search" onclick="toggleFormular(); updateAll();">Advanced Search
                 <i class="fa fa-search smallPaddingLeft"></i>
             </button>
             <br>
             <br>
 
-            <?php
-            echo $result;
-            ?>
 
             <div id="formular" style="display: none;">
                 <?php
@@ -82,6 +79,10 @@ $status = '';
                 ?>
             </div>
 
+
         </div>
+			<?php
+			echo $result;
+			?>
     </div>
 </div>
