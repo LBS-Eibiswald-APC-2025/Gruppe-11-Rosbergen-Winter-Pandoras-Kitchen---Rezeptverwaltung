@@ -17,4 +17,10 @@ class PlansController extends Controller
             'plans' => PlansModel::getUserPlans()
 		));
     }
+
+	public function deletePlan() {
+		$planId = $_POST['plan_id'];
+		PlansModel::deletePlan($planId);
+		Redirect::to('user/index?active=plans');
+	}
 }

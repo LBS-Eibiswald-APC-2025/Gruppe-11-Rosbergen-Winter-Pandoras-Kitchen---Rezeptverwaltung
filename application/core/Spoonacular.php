@@ -134,6 +134,7 @@ class Spoonacular
         return $data;
     }
 
+
     // Search for ingredients - Amount of returned ingredients (number) is 1 per default. Query required.
     public function ingredientSearch($query, $intolerances = null, $sort = null, $sortDirection = null, $number = 1)
     {
@@ -160,4 +161,77 @@ class Spoonacular
 
         return $data;
     }
+
+
+	// Connect a user, if they are not already connected to spoonacular, giving them a username
+	public function connectUserToSpoonacular() {
+		$url = "https://api.spoonacular.com/users/connect?apiKey=" . self::$apiKey;
+		
+		$postData = [
+			"email" => Session::get('user_email')
+		];
+		
+		$ch = curl_init($url);
+		curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+		curl_setopt($ch, CURLOPT_POST, true);
+		curl_setopt($ch, CURLOPT_HTTPHEADER, ["Content-Type: application/json"]);
+		curl_setopt($ch, CURLOPT_POSTFIELDS, json_encode($postData));
+		
+		$response = curl_exec($ch);
+		curl_close($ch);
+		
+		return json_decode($response, true);
+	}
+
+	// Get a week's Meal Plan for a user using Spoonacular
+	public function getMealPlanWeek() {
+		$database = DatabaseFactory::getFactory()->getConnection();
+        $userId = Session::get('user_id');
+
+		$sql = "SELECT spoonacular_username FROM users WHERE user_id = :user_id LIMIT 1";
+
+		$query = $database->prepare($sql);
+		$query->execute(array(":user_id" => $userId));
+
+		$result = $query->fetch();
+
+		$spoonacular_username = $result['spoonacular_username'];
+		if(empty($spoonacular_username)) {
+			$response = $spoonacular->connectUserToSpoonacular();
+			$spoonacular_username = $response['username'];
+
+			$updateSql = "UPDATE users SET spoonacular_username = :spoonacular_username WHERE user_id = :user_id";
+            $updateQuery = $database->prepare($updateSql);
+            $updateQuery->execute(array(
+                ":spoonacular_username" => $spoonacular_username,
+                ":user_id" => $userId
+            ));
+		}
+
+		$url = "https://api.spoonacular.com/users/connect?apiKey=" . self::$apiKey;
+	}
+
+	public function generateMealPlan() {
+		$url = "https://api.spoonacular.com/mealplanner/generate?apiKey=" . self::$apiKey;
+		
+		$targetCalories = 2000;
+
+		// Add optional parameters if they are provided
+		$url .= "&timeframe=" . urlencode("weeks");
+		if (!false) {
+			$url .= "&targetCalories=" . urlencode($targetCalories);
+		}
+		if (false) {
+			$url .= "&diet=" . urlencode($diet);
+		}
+		if (false) {
+			$url .= "&exclude=" . urlencode($exclude);
+		}
+
+		$response = file_get_contents($url);
+		$data = json_decode($response, true);
+	
+		return $data;
+	}
+	
 }

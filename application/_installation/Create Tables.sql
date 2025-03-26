@@ -53,8 +53,11 @@ CREATE TABLE IF NOT EXISTS user_favorites
 );
 
 CREATE TABLE IF NOT EXISTS plans(
-    id INT AUTO_INCREMENT PRIMARY KEY
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    name VARCHAR(255),
+	plan_data JSON
 );
+
 
 CREATE TABLE IF NOT EXISTS user_plans (
     user_id INT NOT NULL,

@@ -38,10 +38,10 @@ class PlansModel
 	/**
     * Delete a meal plan
     */
-	public static function DeletePlan($plan_id)
+	public static function deletePlan($planId)
 	{
 		$database = DatabaseFactory::getFactory()->getConnection();
-		$query = $database->prepare("DELETE FROM plans WHERE plan_id = :plan_id");
-		$query->execute([":user_id" => $plan_id]);
+		$query = $database->prepare("DELETE FROM plans WHERE id = :plan_id");
+		$query->execute([":plan_id" => $planId]);
 	}
 }

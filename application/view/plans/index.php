@@ -4,39 +4,46 @@
 
         <?php $this->renderFeedbackMessages(); ?>
 
-        <h3>Plans</h3>
+        <h3>Your Mealplans</h3>
         <div>
             <?php if (!empty($this->plans)) : ?>
                 <ul>
                     <?php foreach ($this->plans as $plan) : ?>
                         <li>
-                            <?= htmlspecialchars($plan->id); ?>
-                            <a href="#" class="delete-link" data-id="<?= $plan->id; ?>" style="text-decoration: underline; color: blue; cursor: pointer;">
-                                Delete
-                            </a>
+                            <?php
+                                $mealPlanData = json_decode($plan->plan_data, true);
+                                echo '<details class="meal-plan-container">';
+                                echo '<summary><strong>' . $plan->name . '</strong></summary>';  // This will show the plan ID in the collapsed section
+                                
+                                foreach ($mealPlanData['week'] as $day => $dayData) {
+									echo '<div class="day-container">';
+									echo '<h1>' . ucfirst($day) . '</h1>';
+								
+									echo '<div class="meals">';
+									foreach ($dayData['meals'] as $meal) {
+										echo '<div class="meal">';
+										echo '<h3><a class="black-link" href="' . $meal['sourceUrl'] . '" target="_blank">' . $meal["title"] . '</a></h3>';
+										echo '<p>Ready in ' . $meal['readyInMinutes'] . ' minutes</p>';
+										echo '</div>';
+									}
+									echo '</div>'; // Close meals container
+									echo '</div>'; // Close day-container
+								}
+								
+								echo '</details>';  // Close the details container								
+                            ?>
+							<form method="post" action="<?php echo Config::get('URL'); ?>plans/deletePlan">
+								<input type="hidden" name="plan_id" value="<?php echo $plan->id; ?>" />
+								<input class="delete-button" type="submit" value="Delete this Plan" autocomplete="off" />
+							</form>
+							
+
                         </li>
                     <?php endforeach; ?>
                 </ul>
-                <form id="delete-form" action="<?= Config::get('URL'); ?>plans/deleteFavorite" method="post" style="display:none;">
-                    <input type="hidden" name="plan_id" id="delete-plan-id">
-                </form>
             <?php else : ?>
-                <p>No meal plans found.</p>
+                <p>No meal plans created yet.</p>
             <?php endif; ?>
         </div>
     </div>
 </div>
-
-<script>
-    document.addEventListener("DOMContentLoaded", function () {
-        document.querySelectorAll(".delete-link").forEach(function (link) {
-            link.addEventListener("click", function (event) {
-                event.preventDefault();
-                if (confirm("Are you sure?")) {
-                    document.getElementById("delete-plan-id").value = this.getAttribute("data-id");
-                    document.getElementById("delete-form").submit();
-                }
-            });
-        });
-    });
-</script>
