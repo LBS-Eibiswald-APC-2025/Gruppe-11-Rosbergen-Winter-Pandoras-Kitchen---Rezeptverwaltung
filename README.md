@@ -21,7 +21,7 @@ Datum|AP NR|Zeitraum|Aufwand|Ort|Tätigkeit|Probleme|Quellen
 12.02.2025| 1.1.2 | 08:25-12:25 | 4h00min | LBS | Gantt Chart | Excel Liste |
 13.02.2025| 1.1.1 | 09:25-10:00 | 0h35min | LBS | Projekthandbuch | mir fällt nichts ein | []()
 13.02.2025| 1.3.1 | 10:00-12:50 | 2h50min | LBS | Designerfassung | mir fällt nichts ein | []()
-14.02.2025| 1.3.1 | 00:00-00:00 | 0h00min | LBS | Krankenstand |Krankenstand | []()
+14.02.2025| X.X.X | 00:00-00:00 | 0h00min | LBS | Krankenstand | Krankenstand | []()
 25.02.2025| 1.3.2 | 10:00-12:20 | 2h20min | LBS | Git neu verknüpet, Home View, erstellt, Recherche, Anpassungen an HTML und CSS Strucktur | GitHub switch probleme, composer und xampp Probleme | []()
 27.02.2025| 1.3.2 | 09:25-12:50 | 3h25min | LBS | Home View, grobe Fertigstellung der Anpassungen, Recherche, Datenbanktabelle erstellt (preferences, user_preferences) | | []()
 28.02.2025| 1.3.2 | 10:00-12:20 | 2h20min | LBS | style.css (Anpassungen), header.php (Anpassungen), pandoraskitchen/index.php (erstellt), PandorasKitchenController.php (erstellt), resicesearch/index.php | | []()
@@ -38,6 +38,8 @@ Datum|AP NR|Zeitraum|Aufwand|Ort|Tätigkeit|Probleme|Quellen
 20.03.2025| 1.8.2 | 09:25-12:50 | 3h25min | LBS | Dokumentation |  | []()
 21.03.2025| 1.8.2 | 07:30-10:15 | 1h45min | LBS | Dokumentation |  | []()
 25.03.2025| 1.3.2, 1.3.3 | 10:00-12:20 | 2h20min | LBS | Suche und Design vervollständigen | Chips machen Probleme | []()
+27.03.2025| X.X.X | 00:00-00:00 | 0h00min | LBS | Krankenstand | Krankenstand | []()
+28.03.2025| 1.8.2 | XX:XX-XX:XX | XhXXmin | LBS | XXX | mir fällt nichts ein | []()
 XX.XX.XXXX| X.X.X.X. | XX:XX-XX:XX | XhXXmin | LBS | XXX | mir fällt nichts ein | []()
 
 
@@ -76,4 +78,6 @@ Datum|AP NR|Zeitraum|Aufwand|Ort|Tätigkeit|Probleme|Quellen
 20.03.2025| 1.3.3, 1.8.2 | 09:25-12:50 | 3h25min | LBS | Planer einbauen, Dokumentation |  | []()
 21.03.2025| 1.3.3 | 07:30-10:15 | 1h45min | LBS | Simplen Wochenplan einbauen | POST macht Probleme | []()
 25.03.2025| 1.3.3, 1.8.2 | 10:00-12:20 | 2h20min | LBS | Simplen Wochenplan gemacht, Doku angefangen |  | []()
+27.03.2025| 1.8.2 | 09:25-12:50 | 3h25min | LBS | DOkumentation formatiert und geschrieben | Online Word ist schlecht | []()
+28.03.2025| 1.8.2 | XX:XX-XX:XX | XhXXmin | LBS | XXX | mir fällt nichts ein | []()
 XX.XX.XXXX| X.X.X.X. | XX:XX-XX:XX | XhXXmin | LBS | XXX | mir fällt nichts ein | []()
