@@ -39,7 +39,7 @@ Datum|AP NR|Zeitraum|Aufwand|Ort|Tätigkeit|Probleme|Quellen
 21.03.2025| 1.8.2 | 07:30-10:15 | 1h45min | LBS | Dokumentation |  | []()
 25.03.2025| 1.3.2, 1.3.3 | 10:00-12:20 | 2h20min | LBS | Suche und Design vervollständigen | Chips machen Probleme | []()
 27.03.2025| X.X.X | 00:00-00:00 | 0h00min | LBS | Krankenstand | Krankenstand | []()
-28.03.2025| 1.8.2 | XX:XX-XX:XX | XhXXmin | LBS | XXX | mir fällt nichts ein | []()
+28.03.2025| X.X.X | 00:00-00:00 | 0h00min | LBS | Krankenstand | Krankenstand | []()
 XX.XX.XXXX| X.X.X.X. | XX:XX-XX:XX | XhXXmin | LBS | XXX | mir fällt nichts ein | []()
 
 
@@ -78,6 +78,6 @@ Datum|AP NR|Zeitraum|Aufwand|Ort|Tätigkeit|Probleme|Quellen
 20.03.2025| 1.3.3, 1.8.2 | 09:25-12:50 | 3h25min | LBS | Planer einbauen, Dokumentation |  | []()
 21.03.2025| 1.3.3 | 07:30-10:15 | 1h45min | LBS | Simplen Wochenplan einbauen | POST macht Probleme | []()
 25.03.2025| 1.3.3, 1.8.2 | 10:00-12:20 | 2h20min | LBS | Simplen Wochenplan gemacht, Doku angefangen |  | []()
-27.03.2025| 1.8.2 | 09:25-12:50 | 3h25min | LBS | DOkumentation formatiert und geschrieben | Online Word ist schlecht | []()
-28.03.2025| 1.8.2 | XX:XX-XX:XX | XhXXmin | LBS | XXX | mir fällt nichts ein | []()
+27.03.2025| 1.8.2 | 09:25-12:50 | 3h25min | LBS | Dokumentation formatiert und geschrieben | Online Word ist schlecht | []()
+28.03.2025| 1.8.2 | 07:30-11:05 | 3h35min | LBS | Dokumentation | mir fällt nichts ein | []()
 XX.XX.XXXX| X.X.X.X. | XX:XX-XX:XX | XhXXmin | LBS | XXX | mir fällt nichts ein | []()
