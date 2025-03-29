@@ -38,8 +38,11 @@ Datum|AP NR|Zeitraum|Aufwand|Ort|Tätigkeit|Probleme|Quellen
 20.03.2025| 1.8.2 | 09:25-12:50 | 3h25min | LBS | Dokumentation |  | []()
 21.03.2025| 1.8.2 | 07:30-10:15 | 1h45min | LBS | Dokumentation |  | []()
 25.03.2025| 1.3.2, 1.3.3 | 10:00-12:20 | 2h20min | LBS | Suche und Design vervollständigen | Chips machen Probleme | []()
+26.03.2025| 1.3.2, 1.3.3 | 08:15-09:15 | 1h00min | LBS | searchResults.php erweitert, search funktion angepasst, js anpassungen, style anpassungen |  | []()
 27.03.2025| X.X.X | 00:00-00:00 | 0h00min | LBS | Krankenstand | Krankenstand | []()
 28.03.2025| X.X.X | 00:00-00:00 | 0h00min | LBS | Krankenstand | Krankenstand | []()
+29.03.2025| 1.8.2 | 10:00-14:00 | 4h00min | Graz | Dokumentation geschrieben |  | []()
+29.03.2025| 1.8.2 | 18:00-20:00 | 2h00min | Graz | Dokumentation geschrieben |  | []()
 XX.XX.XXXX| X.X.X.X. | XX:XX-XX:XX | XhXXmin | LBS | XXX | mir fällt nichts ein | []()
 
 
