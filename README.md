@@ -43,7 +43,6 @@ Datum|AP NR|Zeitraum|Aufwand|Ort|Tätigkeit|Probleme|Quellen
 28.03.2025| X.X.X | 00:00-00:00 | 0h00min | LBS | Krankenstand | Krankenstand | []()
 29.03.2025| 1.8.2 | 10:00-14:00 | 4h00min | Graz | Dokumentation geschrieben |  | []()
 29.03.2025| 1.8.2 | 18:00-20:00 | 2h00min | Graz | Dokumentation geschrieben |  | []()
-XX.XX.XXXX| X.X.X.X. | XX:XX-XX:XX | XhXXmin | LBS | XXX | mir fällt nichts ein | []()
 
 
 ### Alwin Winter
@@ -83,4 +82,5 @@ Datum|AP NR|Zeitraum|Aufwand|Ort|Tätigkeit|Probleme|Quellen
 25.03.2025| 1.3.3, 1.8.2 | 10:00-12:20 | 2h20min | LBS | Simplen Wochenplan gemacht, Doku angefangen |  | []()
 27.03.2025| 1.8.2 | 09:25-12:50 | 3h25min | LBS | Dokumentation formatiert und geschrieben | Online Word ist schlecht | []()
 28.03.2025| 1.8.2 | 07:30-11:05 | 3h35min | LBS | Dokumentation | mir fällt nichts ein | []()
-XX.XX.XXXX| X.X.X.X. | XX:XX-XX:XX | XhXXmin | LBS | XXX | mir fällt nichts ein | []()
+29.03.2025| 1.8.2 | 15:00-23:00 | 8h00min | Obervogau | Dokumentation fartiggestellt |  | []()
+
