@@ -16,6 +16,6 @@ class PandorasKitchenController extends Controller
      */
     public function index()
     {
-        $this->View->render('<PandorasKitchen/index');
+        $this->View->render('pandoraskitchen/index');
     }
 }

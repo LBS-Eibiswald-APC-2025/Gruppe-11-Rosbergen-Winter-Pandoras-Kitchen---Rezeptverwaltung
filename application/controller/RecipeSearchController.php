@@ -12,7 +12,7 @@ class RecipeSearchController extends Controller
 
     public function index()
     {
-        $this->View->render('RecipeSearch/index', array(
+        $this->View->render('recipesearch/index', array(
             'types' => RecipeSearchModel::getSearchTerms('type', "searchterms"),
             'cuisine' => RecipeSearchModel::getSearchTerms('cuisine', "searchterms"),
             'diet' => RecipeSearchModel::getSearchTerms('diet', "preferences"),
@@ -23,12 +23,12 @@ class RecipeSearchController extends Controller
 
     public function recipeDetail()
     {
-        $this->View->render('RecipeSearch/recipeDetail', array());
+        $this->View->render('recipesearch/recipeDetail', array());
     }
 
 
     public function searchResults()
     {
-        $this->View->render('RecipeSearch/searchResults', array());
+        $this->View->render('recipesearch/searchResults', array());
     }
 }

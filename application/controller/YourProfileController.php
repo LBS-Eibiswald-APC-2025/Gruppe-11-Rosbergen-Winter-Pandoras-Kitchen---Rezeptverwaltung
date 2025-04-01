@@ -13,7 +13,7 @@ class YourProfileController extends Controller
 
     public function index()
     {
-        $this->View->renderWithoutHeaderAndFooter('YourProfile/index', array(
+        $this->View->renderWithoutHeaderAndFooter('yourprofile/index', array(
 			'user_name' => Session::get('user_name'),
 			'user_email' => Session::get('user_email'),
 			'user_gravatar_image_url' => Session::get('user_gravatar_image_url'),
