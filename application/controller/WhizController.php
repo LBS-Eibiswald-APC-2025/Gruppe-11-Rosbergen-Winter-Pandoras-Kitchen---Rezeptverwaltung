@@ -13,6 +13,6 @@ class WhizController extends Controller
 
     public function index()
     {
-        $this->View->render('whiz/index');
+        $this->View->render('Whiz/index');
     }
 }

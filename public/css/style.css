@@ -949,6 +949,14 @@ input[type="number"] {
 
 
 /* ================================ Search Results/Recipes =================================== */
+.container .recipe-results-box {
+    padding-top: 10px;
+    margin-top: 30px;
+    /*background: white; */
+    box-shadow: none;
+
+}
+
 .recipe-results {
     text-align: center;
     /*padding: 20px; */
@@ -1005,13 +1013,15 @@ input[type="number"] {
 
 /* =========================== Recipe Details ================================ */
 
+
+
 .recipe-details {
     max-width: 800px;
     margin: auto;
     padding: 20px;
     background: #fff;
     border-radius: 12px;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    /*box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); */
 }
 
 .recipe-header {

@@ -1,50 +1,68 @@
-<div class="container">
-	<div class="box">
+<?php
 
-		<div>
-			<h1>WHIZ</h1>
-			<div>
+include_once 'application/view/whiz/index.php';
 
-				<?php $this->renderFeedbackMessages(); ?>
+$whiz = '<div class="container">
+    <div class="box">
+        <div class="form-container">
+            <h1>WHIZ</h1>
+            <div>';
 
-				<h3>Favorites</h3>
-				<div>
-					This page will show recipes the user has marked as Favorite.
-				</div>
-				<section class="recipe-results">
-							<div class="recipe-grid">
-								<div class="recipe-card">
-									<a href="#">
-										<img src="recipe-image.jpg" alt="Recipe Image" class="recipe-image">
-										<h3 class="recipe-title">Delicious Pasta</h3>
-										<p class="recipe-description">A tasty and easy-to-make pasta recipe.</p>
-									</a>
-								</div>
-								<div class="recipe-card">
-									<a href="#">
-										<img src="recipe-image.jpg" alt="Recipe Image" class="recipe-image">
-										<h3 class="recipe-title">Healthy Salad</h3>
-										<p class="recipe-description">A fresh and nutritious salad with a great taste.</p>
-									</a>
-								</div>
-								<div class="recipe-card">
-									<a href="#">
-										<img src="recipe-image.jpg" alt="Recipe Image" class="recipe-image">
-										<h3 class="recipe-title">Hearty Soup</h3>
-										<p class="recipe-description">A warm and comforting soup for cold days.</p>
-									</a>
-								</div>
-								<div class="recipe-card">
-									<a href="#">
-										<img src="recipe-image.jpg" alt="Recipe Image" class="recipe-image">
-										<h3 class="recipe-title">Tasty Dessert</h3>
-										<p class="recipe-description">A sweet treat to end your meal perfectly.</p>
-									</a>
-								</div>
-							</div>
-						</section>
+$this->renderFeedbackMessages();
 
-			</div>
-		</div>
-	</div>
-</div>
+$whiz .= '<section class="recipe-results">
+                    <div class="recipe-result">
+                        <div class="recipe-grid">
+                            <div class="recipe-card">
+                                <img class="recipe-image" src="https://img.spoonacular.com/recipes/658615-312x231.jpg"
+                                     alt="Roasted Peppers, Spinach &amp; Feta Pizza">
+                                <div class="recipePadding">
+                                    <p class="recipe-title">Roasted Peppers, Spinach &amp; Feta Pizza</p>
+                                    <span class="recipe-meta">Ready in 45minutes | Servings: 1</span>
+                                    <a class="recipe-link"
+                                       href="http://www.foodista.com/recipe/LWCPWJ2L/roasted-peppers-spinach-feta-pizza"
+                                       target="_blank">View Full Recipe</a>
+                                </div>
+                            </div>
+                            <div class="recipe-card">
+                                <img class="recipe-image" src="https://img.spoonacular.com/recipes/658920-312x231.jpg"
+                                     alt="Rustic Grilled Peaches Pizza">
+                                <div class="recipePadding">
+                                    <p class="recipe-title">Rustic Grilled Peaches Pizza</p>
+                                    <span class="recipe-meta">Ready in 45minutes | Servings: 4</span>
+                                    <a class="recipe-link"
+                                       href="http://www.foodista.com/recipe/PRMSG6W5/rustic-grilled-peaches-pizza"
+                                       target="_blank">View Full Recipe</a>
+                                </div>
+                            </div>
+                            <div class="recipe-card">
+                                <img class="recipe-image" src="https://img.spoonacular.com/recipes/656329-312x231.jpg"
+                                     alt="Pizza bites with pumpkin">
+                                <div class="recipePadding">
+                                    <p class="recipe-title">Pizza bites with pumpkin</p>
+                                    <span class="recipe-meta">Ready in 45minutes | Servings: 4</span>
+                                    <a class="recipe-link"
+                                       href="https://www.foodista.com/recipe/SHKG55X4/pizza-bites-with-pumpkin"
+                                       target="_blank">View Full Recipe</a>
+                                </div>
+                            </div>
+                            <div class="recipe-card">
+                                <img class="recipe-image" src="https://img.spoonacular.com/recipes/680975-312x231.jpg"
+                                     alt="BLT Pizza">
+                                <div class="recipePadding">
+                                    <p class="recipe-title">BLT Pizza</p>
+                                    <span class="recipe-meta">Ready in 45minutes | Servings: 3</span>
+                                    <a class="recipe-link" href="https://www.pinkwhen.com/blt-pizza/" target="_blank">View
+                                        Full Recipe</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </div>
+</div>';
+
+
+echo $whiz;

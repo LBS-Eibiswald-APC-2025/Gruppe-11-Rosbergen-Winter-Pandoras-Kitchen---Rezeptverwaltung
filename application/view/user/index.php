@@ -9,7 +9,7 @@
         <!-- Left side menu -->
         <div id="user-menu-container">
             <h2>
-                <a href="<?= Config::get('URL') . 'yourprofile'; ?>" class="menu-link" data-label="User Profile">
+                <a href="<?= Config::get('URL') . 'YourProfile'; ?>" class="menu-link" data-label="User Profile">
                     <?= "User Profile"; ?>
                 </a>
             </h2>

@@ -51,23 +51,23 @@
                         <a href="<?php echo Config::get('URL'); ?>index/index">Home</a>
                     </li>
 
-                    <li <?php if (View::checkForActiveController($filename, "pandoraskitchen")) {
+                    <li <?php if (View::checkForActiveController($filename, "PandorasKitchen")) {
                         echo ' class="active" ';
                     } ?> >
-                        <a href="<?php echo Config::get('URL'); ?>pandoraskitchen/index">Pandora's Kitchen</a>
+                        <a href="<?php echo Config::get('URL'); ?>PandorasKitchen/index">Pandora's Kitchen</a>
                     </li>
 
-                    <li <?php if (View::checkForActiveController($filename, "recipesearch")) {
+                    <li <?php if (View::checkForActiveController($filename, "RecipeSearch")) {
                         echo ' class="active" ';
                     } ?> >
-                        <a href="<?php echo Config::get('URL'); ?>recipesearch/index">Recipes</a>
+                        <a href="<?php echo Config::get('URL'); ?>RecipeSearch/index">Recipes</a>
                     </li>
 
                     <?php if (Session::userIsLoggedIn()) { ?>
-						<li <?php if (View::checkForActiveController($filename, "whiz")) {
+						<li <?php if (View::checkForActiveController($filename, "Whiz")) {
 							echo ' class="active" ';
 						} ?> >
-							<a href="<?php echo Config::get('URL'); ?>whiz/index">WHIZ</a>
+							<a href="<?php echo Config::get('URL'); ?>Whiz/index">WHIZ</a>
 						</li>
 
 

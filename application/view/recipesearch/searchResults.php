@@ -41,7 +41,20 @@ if (isset($_GET["advancedSearchBtn"]) || !empty($_GET['query'])) {
     $searchReturn = [];
     if (count($errors) === 0) {
         if (!empty($_GET["advancedSearchBtn"])) {
-            $searchReturn = $spoonacular->complexSearch($advancedQuery, $types, $cuisine, $diet, $intolerances, $calories, $sugar, $cholesterol, $fat, null, null, null, 10);
+            $searchReturn = $spoonacular->complexSearch(
+                $advancedQuery,
+                $types,
+                $cuisine,
+                $diet,
+                $intolerances,
+                $calories,
+                $sugar,
+                $cholesterol,
+                $fat,
+                null,
+                null,
+                null,
+                10);
         }elseif (!empty($_GET['query'])) {  /* NORMAL SEARCH*/
             $searchReturn = $spoonacular->complexSearch($_GET['query']);
         }
@@ -51,7 +64,7 @@ if (isset($_GET["advancedSearchBtn"]) || !empty($_GET['query'])) {
         $result = '
         <div class="container">
             <h3>Search Results</h3>
-            <div class="box">
+            <div class="recipe-results-box">
                 <section class="recipe-results">
                     <div class="recipe-result">
                         <div class="recipe-grid">';

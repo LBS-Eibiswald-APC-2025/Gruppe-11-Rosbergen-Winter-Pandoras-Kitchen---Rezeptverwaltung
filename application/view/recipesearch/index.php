@@ -13,9 +13,7 @@ $status = '';
 // Searchresultate anzeigen
 // Kühlschranksuche
 // Rezeptansicht
-// Printfunktion für rezepte
-
-
+// Printfunktion für rezepte ???
 // Plan & Shop Einkaufsliste  ???
 
 

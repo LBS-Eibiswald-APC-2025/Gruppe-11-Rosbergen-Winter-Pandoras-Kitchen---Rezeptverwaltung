@@ -11,7 +11,7 @@
 
             <section class="recipe-details">
                 <div class="recipe-header">
-                    <img src="recipe-image.jpg" alt="Recipe Image" class="recipe-image">
+                    <img src="<?= Config::get('URL'); ?>/images/penne-pasta-tomato-sauce-with-chicken-tomatoes-wooden-table.jpg" alt="Recipe Image" class="recipe-image">
                     <h2 class="recipe-title">Delicious Pasta</h2>
                 </div>
 
