@@ -23,21 +23,41 @@ class UserController extends Controller
      */
     public function index()
 	{
-		$this->View->render('user/index', array(
-			'user_name' => Session::get('user_name'),
-			'user_email' => Session::get('user_email'),
-			'user_gravatar_image_url' => Session::get('user_gravatar_image_url'),
-			'user_avatar_file' => Session::get('user_avatar_file'),
-			'user_account_type' => Session::get('user_account_type'),
-			'menu_items' => array(
-			['url' => Config::get('URL') . 'preferences', 'label' => 'Preferences', 'active' => 'preferences'],
-			['url' => Config::get('URL') . 'favorites', 'label' => 'Favorites', 'active' => 'favorites'],
-			['url' => Config::get('URL') . 'planner', 'label' => 'Make a Plan', 'active' => 'planner'],
-			['url' => Config::get('URL') . 'plans', 'label' => 'Existing Plans', 'active' => 'plans'],
-			['url' => Config::get('URL') . 'pantry', 'label' => 'Pantry', 'active' => 'pantry']
-			)
-			
-		));
+        if (isset($_GET["whiz_trigger"])) {
+            $this->View->render('user/index', array(
+                'user_name' => Session::get('user_name'),
+                'user_email' => Session::get('user_email'),
+                'user_gravatar_image_url' => Session::get('user_gravatar_image_url'),
+                'user_avatar_file' => Session::get('user_avatar_file'),
+                'user_account_type' => Session::get('user_account_type'),
+                'menu_items' => array(
+                    ['url' => Config::get('URL') . 'preferences', 'label' => 'Preferences', 'active' => 'preferences'],
+                    ['url' => Config::get('URL') . 'favorites', 'label' => 'Favorites', 'active' => 'favorites'],
+                    ['url' => Config::get('URL') . 'planner', 'label' => 'Make a Plan', 'active' => 'planner'],
+                    ['url' => Config::get('URL') . 'plans', 'label' => 'Existing Plans', 'active' => 'plans'],
+                    ['url' => Config::get('URL') . 'pantry', 'label' => 'Pantry', 'active' => 'pantry']
+                ),
+                'pantry' => Request::get('whiz_trigger')
+            ));
+
+        }else {
+
+            $this->View->render('user/index', array(
+                'user_name' => Session::get('user_name'),
+                'user_email' => Session::get('user_email'),
+                'user_gravatar_image_url' => Session::get('user_gravatar_image_url'),
+                'user_avatar_file' => Session::get('user_avatar_file'),
+                'user_account_type' => Session::get('user_account_type'),
+                'menu_items' => array(
+                    ['url' => Config::get('URL') . 'preferences', 'label' => 'Preferences', 'active' => 'preferences'],
+                    ['url' => Config::get('URL') . 'favorites', 'label' => 'Favorites', 'active' => 'favorites'],
+                    ['url' => Config::get('URL') . 'planner', 'label' => 'Make a Plan', 'active' => 'planner'],
+                    ['url' => Config::get('URL') . 'plans', 'label' => 'Existing Plans', 'active' => 'plans'],
+                    ['url' => Config::get('URL') . 'pantry', 'label' => 'Pantry', 'active' => 'pantry']
+                )
+
+            ));
+        }
 	}
 
 

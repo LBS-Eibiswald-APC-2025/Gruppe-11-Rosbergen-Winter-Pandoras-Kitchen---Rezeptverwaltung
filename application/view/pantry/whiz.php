@@ -1,7 +1,5 @@
 <?php
 
-include_once 'application/view/whiz/index.php';
-
 $whiz = '<div class="container">
     <div class="box">
         <div class="form-container">
@@ -63,6 +61,3 @@ $whiz .= '<section class="recipe-results">
         </div>
     </div>
 </div>';
-
-
-echo $whiz;

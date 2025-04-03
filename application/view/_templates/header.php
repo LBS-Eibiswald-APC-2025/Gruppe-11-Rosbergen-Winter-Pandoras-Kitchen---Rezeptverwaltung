@@ -9,7 +9,6 @@
     <!-- Favicon -->
     <link rel="icon" type="image/x-icon" href="<?= Config::get('URL'); ?>images/Favicon2.png">
 
-
     <!-- CSS -->
     <link rel="stylesheet" href="<?php echo Config::get('URL'); ?>css/style.css"/>
     <link rel="stylesheet" href="<?php echo Config::get('URL'); ?>css/normalize.css"/>
@@ -26,8 +25,8 @@
     <link rel="stylesheet" href="https://cdn.datatables.net/1.11.5/css/jquery.dataTables.min.css"/>
     <script src="https://cdn.datatables.net/1.11.5/js/jquery.dataTables.min.js"></script>
 
-    <!-- JS MULTISELECT -->
-    <script src="../public/js/multiselect.js"></script>
+    <!-- SCRIPT JS -->
+    <script src="../public/js/script.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
     <!-- CSS MULTISELECT -->

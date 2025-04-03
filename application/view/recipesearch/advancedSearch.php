@@ -210,4 +210,3 @@ Sortierung:
     Kosten (price)
     Zeitfaktor (time)
 -->
-

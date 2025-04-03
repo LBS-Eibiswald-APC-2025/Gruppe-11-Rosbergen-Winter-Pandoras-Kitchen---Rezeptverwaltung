@@ -40,6 +40,7 @@ class Spoonacular
         string $cuisine = null,
         string $diet = null,
         string $intolerances = null,
+        $time = null,
         $calories = null,
         $sugar = null,
         $cholesterol = null,
@@ -52,6 +53,7 @@ class Spoonacular
         bool $addRecipeInstructions = true,
         bool $addRecipeNutrition = false)
     {
+
         $query = urlencode($query); // Sanitize user input
         $url = "https://api.spoonacular.com/recipes/complexSearch?query=$query";
 
@@ -71,22 +73,21 @@ class Spoonacular
         if (!empty($cuisine)) {
             $url .= "&cuisine=" . urlencode($cuisine);
         }
+        if (!empty($time)) {
+            $url .= "&maxReadyTime=" . urlencode($time);
+        }
         if (!empty($calories)) {
             $url .= "&calories=" . urlencode($calories);
         }
-
         if (!empty($sugar)) {
             $url .= "&sugar=" . urlencode($sugar);
         }
-
         if (!empty($cholesterol)) {
             $url .= "&cholesterol=" . urlencode($cholesterol);
         }
-
         if (!empty($fat)) {
             $url .= "&fat=" . urlencode($fat);
         }
-
         if (!empty($diet)) {
             // implode Convert array to string
             $url .= "&diet=" . urlencode($diet);

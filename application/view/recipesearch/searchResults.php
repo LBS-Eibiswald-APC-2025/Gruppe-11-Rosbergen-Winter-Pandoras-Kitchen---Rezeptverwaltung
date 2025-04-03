@@ -33,10 +33,13 @@ if (isset($_GET["advancedSearchBtn"]) || !empty($_GET['query'])) {
     $cuisine = $_GET["cuisine"] ?? "";
     $diet = $_GET["diet"] ?? "";
     $intolerances = $_GET["intolerances"] ?? "";
+    $time = $_GET["time"] ?? "";
     $calories = $_GET["calories"] ?? "";
     $sugar = $_GET["sugar"] ?? "";
     $cholesterol = $_GET["cholesterol"] ?? "";
     $fat = $_GET["fat"] ?? "";
+
+   // var_dump($time);
 
     $searchReturn = [];
     if (count($errors) === 0) {
@@ -47,6 +50,7 @@ if (isset($_GET["advancedSearchBtn"]) || !empty($_GET['query'])) {
                 $cuisine,
                 $diet,
                 $intolerances,
+                $time,
                 $calories,
                 $sugar,
                 $cholesterol,

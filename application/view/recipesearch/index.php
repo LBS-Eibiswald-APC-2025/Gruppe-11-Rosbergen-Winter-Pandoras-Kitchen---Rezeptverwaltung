@@ -17,32 +17,6 @@ $status = '';
 // Plan & Shop Einkaufsliste  ???
 
 
-/**
- * This code performs a recipe search using the Spoonacular API and displays the results
- */
-/*if (isset($_GET['query']) && !empty($_GET['query'])) {
-    $spoonacular = Spoonacular::getInstance();
-    $data = $spoonacular->complexSearch($_GET['query']);
-
-    if (!empty($data['results'])) {
-        echo "<h3>Search Results for: " . htmlspecialchars($_GET['query']) . "</h3>";
-        echo "<ul>";
-        foreach ($data['results'] as $recipe) {
-            echo "<li>";
-            echo "<strong>" . htmlspecialchars($recipe['title']) . "</strong><br>";
-            echo "<img src='" . htmlspecialchars($recipe['image']) . "' alt='" . htmlspecialchars($recipe['title']) . "' width='200'><br>";
-            echo ($recipe['summary']) . "<br>";
-            echo "</li>";
-        }
-        echo "</ul>";
-    } else {
-        echo "<p>No recipes found.</p>";
-    }
-}
-*/
-
-
-
 ?>
 <!-- Normal Search Container-->
 <div class="container">

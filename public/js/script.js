@@ -103,7 +103,6 @@ function toggleFormular() {
     }
 }
 
-
 /* Slider input
 document.addEventListener("DOMContentLoaded", function () {
     let slider = document.getElementById("myRange");

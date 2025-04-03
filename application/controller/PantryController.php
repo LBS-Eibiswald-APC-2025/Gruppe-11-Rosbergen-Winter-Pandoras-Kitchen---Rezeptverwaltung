@@ -2,17 +2,17 @@
 
 class PantryController extends Controller
 {
-	// !! TODO add WHIZ
+    // !! TODO add WHIZ
     /**
      * Construct this object by extending the basic Controller class
      */
     public function __construct()
     {
         parent::__construct();
-		Auth::checkAuthentication();
+        Auth::checkAuthentication();
     }
 
-	/**
+    /**
      * Display pantry list
      */
     public function index()
@@ -22,22 +22,22 @@ class PantryController extends Controller
         ));
     }
 
-	/**
+    /**
      * Add new item to pantry, based on POSTed name
      */
     public function addItem()
     {
-		$spoonacular = Spoonacular::getInstance();
-		$ingredientInput = $_POST['ingredient_name'];
-		$data = $spoonacular->ingredientSearch($ingredientInput, null, null, null, 1); // !! TODO add intolerances
+        $spoonacular = Spoonacular::getInstance();
+        $ingredientInput = $_POST['ingredient_name'];
+        $data = $spoonacular->ingredientSearch($ingredientInput, null, null, null, 1); // !! TODO add intolerances
 
-		// Extract the ID from the first result in the response. Use null coalescing to avoid errors if no results are found.
-		$ingredientID = $data['results'][0]['id'] ?? null; 
-		$ingredientName = $data['results'][0]['name'] ?? null; 
-		$image = $data['results'][0]['image'] ?? null; 
+        // Extract the ID from the first result in the response. Use null coalescing to avoid errors if no results are found.
+        $ingredientID = $data['results'][0]['id'] ?? null;
+        $ingredientName = $data['results'][0]['name'] ?? null;
+        $image = $data['results'][0]['image'] ?? null;
 
-		PantryModel::addPantryItem($ingredientID, $ingredientName, $image);
-		Redirect::to('user/index?active=pantry');
+        PantryModel::addPantryItem($ingredientID, $ingredientName, $image);
+        Redirect::to('user/index?active=pantry');
     }
 
     /**
@@ -45,8 +45,13 @@ class PantryController extends Controller
      */
     public function deleteItem()
     {
-		$itemId = $_GET['item_id'];
-		PantryModel::deletePantryItem($itemId); // Pass the item ID to the model
-		Redirect::to('user/index?active=pantry');
-	}
+        $itemId = $_GET['item_id'];
+        PantryModel::deletePantryItem($itemId); // Pass the item ID to the model
+        Redirect::to('user/index?active=pantry');
+    }
+
+    public function whiz()
+    {
+        Redirect::to('user/index?active=pantry');
+    }
 }

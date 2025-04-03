@@ -1,5 +1,5 @@
 <?php
-include '../whiz/index.php';
+include 'whiz.php';
 
 ?>
 
@@ -40,16 +40,15 @@ include '../whiz/index.php';
                 $ingredientName = ucfirst(strtolower(htmlspecialchars($ingredient['name'])));
 
                 echo "<span class='remove'>" . $ingredientName . " 
-					<a class='white-link' href='" . Config::get('URL') . "pantry/deleteItem?item_id=" . htmlspecialchars($ingredient['id']) . "' ><i class='fa fa-times' aria-hidden='true'></i>
-</i></a></span>";
+					<a class='white-link' href='" . Config::get('URL') . "pantry/deleteItem?item_id="
+                    . htmlspecialchars($ingredient['id']) . "' ><i class='fa fa-times' aria-hidden='true'></i>
+                        </a></span>";
                 echo "</div>";
             }
             echo "</div>";
         } else {
             echo "<p>No ingredients added yet.</p>";
         }
-
-
         ?>
 
 
@@ -62,14 +61,34 @@ include '../whiz/index.php';
             </div>
         </form>
         <p><small>*Note that ingredients such as salt and water are always considered to be in stock in your
-                pantry</small></p> <!-- // !! TODO Make sure this is true -->
+                pantry</small></p>
+        <!-- // !! TODO Make sure this is true -->
+
+        <form class="container" action="<?= Config::get('URL'); ?>user/index?active=pantry" method="get">
+            <div class="select filters flex_wrapper gap">
+                <input class="" type="hidden" name="active" placeholder="Add ingredient" value="pantry">
+                <input class="submit-button" type="submit" name="whiz_trigger" value="whiz">
+            </div>
+        </form>
     </div>
+
+    <?php
+   // var_dump($_POST);
+
+    if (isset($this->pantry)) {
+        echo "HAHAHAHA";
+        var_dump($_GET);
+        $spoonacular = Spoonacular::getInstance();
+        $whizResTest = $spoonacular->complexSearch("");
+    }
+
+    ?>
 
     <!-- <br><br><br>
     // !! <p><small>A future addition to this page would be keeping track of specific stock of these items, but this is not in the scope of this project</small></p> -->
 
-    <?php
-    echo $whiz;
-    ?>
-
 </div>
+
+
+
+
