@@ -89,8 +89,15 @@ if (isset($_GET["advancedSearchBtn"]) || !empty($_GET['query'])) {
         </div>';
     }
 	else {
-		$result = "<p>Sorry, we couldn't find any recipes matching your specifications.</p>";
+		$result = "<p class='search-error-msg'>Sorry, we couldn't find any recipes matching your specifications.</p>";
+		foreach ($errors as $errorArray) {
+			foreach ($errorArray as $error) {
+				$result .= "<p class='search-error-msg'>" . htmlspecialchars($error) . "</p>"; // Append each error to $result
+			}
+		}
 	}
+	
+	
 }
 
 ?>
