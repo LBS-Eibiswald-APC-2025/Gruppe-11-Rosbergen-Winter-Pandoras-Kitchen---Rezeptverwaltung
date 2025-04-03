@@ -8,7 +8,7 @@ class ConfigTest extends PHPUnit_Framework_TestCase
 	public function setUp()
 	{
 		$_SERVER['HTTP_HOST'] = 'localhost';
-		$_SERVER['SCRIPT_NAME'] = 'index.php';
+		$_SERVER['SCRIPT_NAME'] = 'whiz.php';
 		Config::$config = null;
 	}
 
