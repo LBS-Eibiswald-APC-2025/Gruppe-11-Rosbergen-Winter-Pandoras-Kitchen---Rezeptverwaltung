@@ -45,7 +45,6 @@ class PlannerController extends Controller
 			":plan_Id" => $plan_Id
 		));
 
-		// !! PlansModel::addPlan();
 		Redirect::to('user/index?active=plans');
     }
 

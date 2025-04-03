@@ -1008,6 +1008,10 @@ input[type="number"] {
     font-size: 14px;
     color: #666;
 }
+.search-error-msg {
+	color: red;
+	font-weight: bold;
+}
 
 
 
