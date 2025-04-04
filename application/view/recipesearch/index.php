@@ -1,21 +1,13 @@
+
+
+
+
+
+
 <!-- echo out the system feedback (error and success messages) -->
 <?php $this->renderFeedbackMessages();
 include "advancedSearch.php";
 include "searchResults.php";
-
-$status = '';
-
-// ToDo
-
-// Mit JS die erweiterungen von Formular anzeigen und ausblenden
-// Validierung !!!! und XSS Filter aus der Filter.php
-
-// Searchresultate anzeigen
-// Kühlschranksuche
-// Rezeptansicht
-// Printfunktion für rezepte ???
-// Plan & Shop Einkaufsliste  ???
-
 
 ?>
 <!-- Normal Search Container-->
@@ -42,19 +34,29 @@ $status = '';
             </button>
             <br>
             <br>
-
-
             <div id="formular" style="display: none;">
                 <?php
                 /* Additional Html from advancedSearch.php */
                 echo $additionalHtml . '<br><br>';
                 ?>
             </div>
-
-
         </div>
 			<?php
 			echo $result;
 			?>
     </div>
 </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+

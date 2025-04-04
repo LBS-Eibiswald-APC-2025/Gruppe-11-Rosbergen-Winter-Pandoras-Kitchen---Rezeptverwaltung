@@ -63,13 +63,6 @@
                     </li>
 
                     <?php if (Session::userIsLoggedIn()) { ?>
-						<li <?php if (View::checkForActiveController($filename, "Whiz")) {
-							echo ' class="active" ';
-						} ?> >
-							<a href="<?php echo Config::get('URL'); ?>Whiz/index">WHIZ</a>
-						</li>
-
-
                         <!-- Show Register button only for admin users -->
                         <?php if (Session::userIsAdmin()) { ?>
                             <li <?php if (View::checkForActiveControllerAndAction($filename, "register/index")) {

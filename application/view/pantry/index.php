@@ -60,28 +60,28 @@ include 'whiz.php';
                 <button class="submit-button" type="submit">Add</button>
             </div>
         </form>
-        <p><small>*Note that ingredients such as salt and water are always considered to be in stock in your
-                pantry</small></p>
-        <!-- // !! TODO Make sure this is true -->
+        <p><small>*Note that ingredients such as salt and water are always considered to be in stock in your pantry</small></p>    <!-- // !! TODO Make sure this is true -->
 
+        <!--
         <form class="container" action="<?= Config::get('URL'); ?>user/index?active=pantry" method="get">
             <div class="select filters flex_wrapper gap">
                 <input class="" type="hidden" name="active" placeholder="Add ingredient" value="pantry">
                 <input class="submit-button" type="submit" name="whiz_trigger" value="whiz">
             </div>
         </form>
+        -->
     </div>
 
     <?php
    // var_dump($_POST);
 
-    if (isset($this->pantry)) {
-        echo "HAHAHAHA";
-        var_dump($_GET);
+    /*if (isset($this->pantry)) {
+        //echo "HAHAHAHA";
+        //var_dump($_GET);
         $spoonacular = Spoonacular::getInstance();
         $whizResTest = $spoonacular->complexSearch("");
     }
-
+*/
     ?>
 
     <!-- <br><br><br>
