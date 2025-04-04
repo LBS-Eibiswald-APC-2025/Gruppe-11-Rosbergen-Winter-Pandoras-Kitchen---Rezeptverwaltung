@@ -114,7 +114,7 @@ class RecipeSearchModel
 				$get[$key] = Filter::XSSFilter($get[$key]);
 
 				// Validate the maximum length of the text input
-				if (mb_strlen($get[$key]) > $definition['maxLength']) {
+				if (strlen($get[$key]) > $definition['maxLength']) {
 					$errors[$key][] = "The search term must not exceed 30 characters.";
 				}
 				// Ensure the input contains only valid letters, spaces, and special characters like umlauts
