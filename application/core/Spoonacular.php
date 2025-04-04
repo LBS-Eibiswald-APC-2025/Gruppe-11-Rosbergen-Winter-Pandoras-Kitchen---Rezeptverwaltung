@@ -3,7 +3,7 @@
 class Spoonacular
 {
     private static $apiKey = 'f2120b4500e84105bd83caea896db140';
-    private static $spoonacular; // Missing static property
+    private static $spoonacular;
 
     public static function getInstance()
     {
